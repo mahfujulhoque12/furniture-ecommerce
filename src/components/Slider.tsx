@@ -1,5 +1,4 @@
 import React from "react"
-import MaxWidthWrapper from "./layout/MaxWidthWrapper"
 import {
   Carousel,
   CarouselContent,
