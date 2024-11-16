@@ -9,7 +9,7 @@ import MegaMenu from "@/components/navbar/MegaMenu";
 import MobileNavigationDrawer from "@/components/navbar/MobileNavigationDrawer";
 import Image from "next/image";
 import logo from '/public/logo/logo.png';
-import Search from "../Search";
+// import Search from "../Search";
 
 interface MobileMenuOpeningPosition {
   mobileMenuPos?: "left" | "right" | "top" | "bottom"; // Make it optional
@@ -20,7 +20,7 @@ const Navigation = ({ mobileMenuPos = "left" }: MobileMenuOpeningPosition) => {
   const drawerButtonRef = useRef(null);
 
   return (
-    <header className="sticky top-0 lef-0 z-50 h-[135px] bg-white border-b border-[#cacaca]">
+    <header className="sticky top-0 lef-0 z-50 h-[60px] bg-white border-b border-[#cacaca]">
       <div className="border-b">
       <MaxWidthWrapper>
         <div className="flex items-center  justify-between gap-4 h-[60px]">
@@ -64,7 +64,7 @@ const Navigation = ({ mobileMenuPos = "left" }: MobileMenuOpeningPosition) => {
       </MaxWidthWrapper>
       </div>
    
-      <Search/>
+      {/* <Search/> */}
     </header>
   );
 };
