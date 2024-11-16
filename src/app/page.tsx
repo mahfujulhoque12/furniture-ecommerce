@@ -9,6 +9,7 @@ import Speacial from "@/components/Speacial";
 import SpeacialProducts from "@/components/SpeacialProducts";
 import SetPac from "@/components/SetPac";
 import FaqAccordion from "@/components/faq/FaqAccordion";
+import Blog from '@/components/Blog'
 
 
 
@@ -28,6 +29,7 @@ export default function Home() {
       <MagicHoliday/>
       <Deals/>
       <SetPac/>
+      <Blog/>
       <FaqAccordion/>
     </div>
   );

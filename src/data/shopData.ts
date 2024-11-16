@@ -3,11 +3,9 @@ import furniture2 from '/public/furniture/furniture2.jpg';
 import furniture3 from '/public/furniture/furniture3.jpg';
 import furniture4 from '/public/furniture/furniture4.jpg';
 import furniture5 from '/public/furniture/furniture5.jpg';
-import furniture6 from '/public/furniture/furniture6.jpg';
 import furniture7 from '/public/furniture/furniture7.jpg';
 import furniture8 from '/public/furniture/furniture8.jpg';
 import furniture9 from '/public/furniture/furniture9.jpg';
-import furniture10 from '/public/furniture/furniture10.jpg';
 import furniture11 from '/public/furniture/furniture11.jpg';
 import furniture12 from '/public/furniture/furniture12.jpg';
 import furniture13 from '/public/furniture/furniture13.jpg';
@@ -21,8 +19,9 @@ type CardData = {
     moreImg:string [];
     title:string;
     des:string;
-    price :string;
-    oldPrice:string;
+    caption:string;
+    price:  number;
+    oldPrice?:  number;
     category:string;
     color:string;
   }
@@ -40,10 +39,11 @@ type CardData = {
       slug:createSlug("Speacial Offer for you1"),
       imageUrl:furniture1.src,
       moreImg:[furniture12.src,furniture11.src,furniture1.src,furniture4.src,],
-      title:"Speacial Offer  for you",
+      caption:"Speacial Offer  for  you",
+      title:"Speacial Offer  for  you one",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni! Nostrum magni!Nostrum,",
-      price:"$260",
-      oldPrice:"$320",
+      price:260,
+      oldPrice:320,
       color:'yellow',
     },
     {
@@ -52,10 +52,11 @@ type CardData = {
      slug: createSlug("Speacial Offer for you2"),
       imageUrl:furniture3.src,
       moreImg:[furniture12.src,furniture11.src,furniture1.src,furniture4.src,],
-      title:"Speacial Offer for you",
+      caption:"Speacial Offer  for  you",
+      title:"baby product for your baby",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni! Nostrum magni!Nostrum,",
-      price:"$230",
-      oldPrice:"$320",
+      price:260,
+      oldPrice:320,
        color:'yellow',
 
     },
@@ -65,10 +66,11 @@ type CardData = {
      slug: createSlug("Speacial Offer for you3"),
      imageUrl:furniture5.src,
      moreImg:[furniture12.src,furniture11.src,furniture1.src,furniture4.src,],
+     caption:"Speacial Offer  for  you",
       title:"Speacial Offer for you",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni! Nostrum magni!Nostrum,",
-      price:"$50",
-      oldPrice:"$320",
+      price:60,
+      oldPrice:320,
        color:'yellow',
 
     },
@@ -78,10 +80,11 @@ type CardData = {
      slug: createSlug("Speacial Offer for you4"),
      imageUrl:furniture7.src,
      moreImg:[furniture12.src,furniture11.src,furniture1.src,furniture4.src,],
+     caption:"Speacial Offer  for  you",
       title:"Speacial Offer for you",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni! Nostrum magni!Nostrum,",
-      price:"$60",
-      oldPrice:"$320",
+      price:160,
+      oldPrice:320,
        color:'yellow',
 
     },
@@ -91,10 +94,11 @@ type CardData = {
      slug: createSlug("Speacial Offer for you5"),
      imageUrl:furniture9.src,
      moreImg:[furniture12.src,furniture11.src,furniture1.src,furniture4.src,],
+     caption:"Speacial Offer  for  you",
       title:"Speacial Offer for you",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni! Nostrum magni!Nostrum,",
-      price:"$200",
-      oldPrice:"$320",
+      price:860,
+      oldPrice:320,
        color:'sky',
 
     },
@@ -104,10 +108,11 @@ type CardData = {
      slug: createSlug("Speacial Offer for you6"),
      imageUrl:furniture11.src,
      moreImg:[furniture12.src,furniture11.src,furniture1.src,furniture4.src,],
+     caption:"Speacial Offer  for  you",
       title:"Speacial Offer for you",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni! Nostrum magni!Nostrum,",
-      price:"$120",
-      oldPrice:"$320",
+      price:210,
+      oldPrice:320,
        color:'sky',
 
     },
@@ -117,10 +122,11 @@ type CardData = {
      slug: createSlug("Speacial Offer for you7"),
      imageUrl:furniture12.src,
      moreImg:[furniture12.src,furniture11.src,furniture1.src,furniture4.src,],
+     caption:"Speacial Offer  for  you",
       title:"Speacial Offer for you",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni! Nostrum magni!Nostrum,",
-      price:"$220",
-      oldPrice:"$300",
+      price:260,
+     oldPrice:320,
        color:'sky',
 
     },
@@ -130,10 +136,12 @@ type CardData = {
     slug: createSlug("Speacial Offer for you8"),
     imageUrl:furniture11.src,
     moreImg:[furniture12.src,furniture11.src,furniture1.src,furniture4.src,],
-      title:"Speacial Offer for you",
+
+    caption:"Speacial Offer  for  you",  
+  title:"normal product for you",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni! Nostrum magni!Nostrum,",
-      price:"$80",
-      oldPrice:"$300",
+      price:80,
+     oldPrice:320,
        color:'sky',
 
     },
@@ -143,10 +151,11 @@ type CardData = {
     slug: createSlug("Speacial Offer for you9"),
     imageUrl:furniture13.src,
     moreImg:[furniture12.src,furniture11.src,furniture1.src,furniture4.src,],
-      title:"Speacial Offer for you",
+
+caption:"Speacial Offer  for  you",    title:"Speacial Offer for you",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni! Nostrum magni!Nostrum,",
-      price:"$90",
-      oldPrice:"$300",
+      price:90, 
+     oldPrice:320,
        color:'sky',
 
     },
@@ -156,10 +165,11 @@ type CardData = {
      slug: createSlug("Speacial Offer for you10"),
      imageUrl:furniture5.src,
      moreImg:[furniture12.src,furniture11.src,furniture1.src,furniture4.src,],
+     caption:"Speacial Offer  for  you",
       title:"Speacial Offer for you",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni! Nostrum magni!Nostrum,",
-      price:"$250",
-      oldPrice:"$300",
+      price:250,
+     oldPrice:320,
        color:'green',
 
     },
@@ -169,10 +179,11 @@ type CardData = {
      slug: createSlug("Speacial Offer for you11"),
      imageUrl:furniture3.src,
      moreImg:[furniture12.src,furniture11.src,furniture1.src,furniture4.src,],
+     caption:"Speacial Offer  for  you",
       title:"Speacial Offer for you",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni! Nostrum magni!Nostrum,",
-      price:"$100",
-      oldPrice:"$300",
+      price:100,
+     oldPrice:320,
        color:'green',
 
     },
@@ -182,10 +193,11 @@ type CardData = {
      slug: createSlug("Speacial Offer for you12"),
      imageUrl:furniture4.src,
      moreImg:[furniture12.src,furniture11.src,furniture1.src,furniture4.src,],
+     caption:"Speacial Offer  for  you",
       title:"Speacial Offer for you",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni! Nostrum magni!Nostrum,",
-      price:"$110",
-      oldPrice:"$300",
+      price:110,
+     oldPrice:320,
        color:'green',
 
     },
@@ -195,10 +207,11 @@ type CardData = {
      slug: createSlug("Speacial Offer for you13"),
      imageUrl:furniture3.src,
      moreImg:[furniture12.src,furniture11.src,furniture1.src,furniture4.src,],
+     caption:"Speacial Offer  for  you",
       title:"Speacial Offer for you",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni! Nostrum magni!Nostrum,",
-      price:"$30",
-      oldPrice:"$300",
+      price:30,
+     oldPrice:320,
        color:'green',
 
     },
@@ -208,10 +221,11 @@ type CardData = {
      slug: createSlug("Speacial Offer for you14"),
      imageUrl:furniture8.src,
      moreImg:[furniture12.src,furniture11.src,furniture1.src,furniture4.src,],
+     caption:"Speacial Offer  for  you",
       title:"Speacial Offer for you",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni! Nostrum magni!Nostrum,",
-      price:"$40",
-      oldPrice:"$300",
+      price:40,
+     oldPrice:320,
        color:'red',
 
     },
@@ -221,10 +235,11 @@ type CardData = {
      slug: createSlug("Speacial Offer for you15"),
      imageUrl:furniture1.src,
      moreImg:[furniture12.src,furniture11.src,furniture1.src,furniture4.src,],
+     caption:"Speacial Offer  for  you",
       title:"Speacial Offer for you",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni! Nostrum magni!Nostrum,",
-      price:"$250",
-      oldPrice:"$300",
+      price:250,
+     oldPrice:320,
        color:'red',
 
     },{
@@ -233,10 +248,11 @@ type CardData = {
      slug: createSlug("Speacial Offer for you16"),
      imageUrl:furniture14.src,
      moreImg:[furniture12.src,furniture11.src,furniture1.src,furniture4.src,],
+     caption:"Speacial Offer  for  you",
       title:"Speacial Offer for you",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni! Nostrum magni!Nostrum,",
-      price:"$70",
-      oldPrice:"$300",
+      price:701,
+     oldPrice:320,
        color:'red',
 
     },{
@@ -245,10 +261,11 @@ type CardData = {
      slug: createSlug("Speacial Offer for you17"),
      imageUrl:furniture2.src,
      moreImg:[furniture12.src,furniture11.src,furniture1.src,furniture4.src,],
+     caption:"Speacial Offer  for  you",
       title:"Speacial Offer for you",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni! Nostrum magni!Nostrum,",
-      price:"$250",
-      oldPrice:"$300",
+      price:250,
+     oldPrice:320,
        color:'red',
 
     },{
@@ -257,10 +274,11 @@ type CardData = {
      slug: createSlug("Speacial Offer for you18"),
      imageUrl:furniture1.src,
      moreImg:[furniture12.src,furniture11.src,furniture1.src,furniture4.src,],
+     caption:"Speacial Offer  for  you",
       title:"Speacial Offer for you",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni! Nostrum magni!Nostrum,",
-      price:"$250",
-      oldPrice:"$300",
+      price:250,
+     oldPrice:320,
        color:'red',
 
     },{
@@ -269,10 +287,11 @@ type CardData = {
      slug: createSlug("Speacial Offer for you19"),
      imageUrl:furniture8.src,
      moreImg:[furniture12.src,furniture11.src,furniture1.src,furniture4.src,],
+     caption:"Speacial Offer  for  you",
       title:"Speacial Offer for you",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni! Nostrum magni!Nostrum,",
-      price:"$320",
-      oldPrice:"$300",
+      price:320,
+     oldPrice:320,
        color:'green',
 
     },

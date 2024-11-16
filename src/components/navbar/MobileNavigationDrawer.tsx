@@ -94,7 +94,7 @@ const MobileNavigationDrawer: React.FC<MobileNavigationDrawerProps> = ({
                 drawerButtonRef.current.focus();
               }
             }} >
-              <Image src={logo} alt="logo" width={50} height={50} className="  h-auto object-cover" />
+              <Image src={logo} alt="logo" width={50} height={50} className="h-auto object-cover" />
               </Link>          
             </div>
 

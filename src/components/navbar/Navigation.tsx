@@ -24,10 +24,10 @@ const Navigation = ({ mobileMenuPos = "left" }: MobileMenuOpeningPosition) => {
       <div className="border-b">
       <MaxWidthWrapper>
         <div className="flex items-center  justify-between gap-4 h-[60px]">
-         <div className="flex  gap-5 p-3">
+         <div className="flex  gap-5 p-3 md:hidden">
          <button
             ref={drawerButtonRef}
-            className="border-none h-[45px] w-[45] -ml-3 bg-transparent md:hidden"
+            className="border-none h-[45px] w-[45] -ml-3 bg-transparent "
             aria-haspopup="true"
             onClick={() => setIsDrawerOpen(true)}
           >

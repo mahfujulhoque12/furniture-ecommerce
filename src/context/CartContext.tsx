@@ -1,11 +1,12 @@
 "use client"
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
-interface CartItem {
+export  interface CartItem {
   id: number;
   name: string;
   price: number;
   quantity: number;
+  image :string;
 }
 
 interface CartContextType {
@@ -13,7 +14,7 @@ interface CartContextType {
   addToCart: (item: CartItem) => void;
   updateCartItem: (id: number, quantity: number) => void;
   removeFromCart: (id: number) => void;
-  resetItem: (id: number) => void; // New function for resetting
+  resetItemFlag:(id:number) => void;
   subtotal: number;
   total: number;
 }

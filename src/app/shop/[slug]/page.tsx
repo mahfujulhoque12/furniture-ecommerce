@@ -1,7 +1,7 @@
 "use client";
 import { FC, useState } from "react";
 import { use } from "react";
-import { cardData } from "@/data/shopData";
+import { cardData } from "@/data/discountData";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
@@ -11,7 +11,8 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { GiCutDiamond } from "react-icons/gi";
 import Link from 'next/link';
 import ServicesFaq from "@/components/ServicesFaq";
-
+import { useCart } from "@/context/CartContext";
+import { useEffect } from "react";
 
 
 import {
@@ -31,20 +32,99 @@ interface PageProps {
 }
 
 const Page: FC<PageProps> = ({ params }) => {
+  
   const { slug } = use(params);
   const allInfo = cardData.find((card) => card.slug === slug);
 
-  const [mainImage, setMainImage] = useState(allInfo?.imageUrl);
+   // Ensure itemPrice has a default value of 0 if `allInfo` is undefined
+  const itemPrice = allInfo?.price ?? 0;
+  const [mainImage, setMainImage] = useState<string | null>(allInfo?.imageUrl ?? null);
+  const [msg, setMsg] = useState<string | null>(null);
+  const { addToCart, updateCartItem ,resetItemFlag, cartItems  } = useCart();
 
-  const [count,setCount] =  useState<number>(1)
-  const [msg ,setMsg] = useState<string | null> ("")
+  // Load initial count and price from localStorage
+  const initialCount = JSON.parse(localStorage.getItem("count") || "1");
+  const initialTotalPrice = JSON.parse(localStorage.getItem("totalPrice") || itemPrice.toString());
+
+  const [count, setCount] = useState<number>(initialCount);
+  const [totalPrice, setTotalPrice] = useState<number>(initialTotalPrice);
+
+
+    // Check if item is already in the cart
+    const isInCart = cartItems.some((item) => item.id === allInfo?.id);
+
+
+
+  // Save count and totalPrice to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem("count", JSON.stringify(count));
+    localStorage.setItem("totalPrice", JSON.stringify(totalPrice));
+  }, [count, totalPrice]);
+
+
+
+  
+  useEffect(() => {
+    // Update totalPrice only if allInfo exists and has a price
+    if (allInfo) {
+      setTotalPrice(count * itemPrice);
+    }
+  }, [count, itemPrice, allInfo]);
+
+
+   // Reset to initial values if the item is deleted from the cart
+
+   useEffect(() => {
+    const itemInCart = cartItems.find((item) => item.id === allInfo?.id);
+
+    if (!itemInCart) {
+      setCount(1);
+      setTotalPrice(itemPrice);
+      if (allInfo) resetItemFlag(allInfo.id);
+    }
+  }, [cartItems, allInfo, itemPrice, resetItemFlag]);
+
+
+
+  const incrementCount = () => {
+    const newCount = count + 1;
+    setCount(newCount);
+    setTotalPrice(newCount * itemPrice);
+   if(allInfo) updateCartItem(allInfo?.id, newCount);
+  };
 
   const decrementCount = () => {
     if (count > 1) {
-      setCount(count - 1);
-    } else {
-      setMsg("Minimum required is 1");
+      const newCount = count - 1;
+      setCount(newCount);
+      setTotalPrice(newCount * itemPrice);
+      if(allInfo) updateCartItem(allInfo?.id, newCount);
+    } 
+    else {
+       setMsg("Minimum quantity is 1");
+      setTimeout(() => {
+        setMsg(null); 
+      }, 3000);
+  
     }
+  };
+
+  const addItemToCart = () => {
+    if(allInfo){
+      console.log("Adding to cart:", allInfo); // Log to verify `imageUrl`
+      addToCart({
+        id: allInfo?.id,
+        name: allInfo?.title || "Unknown Item",
+        price: itemPrice,
+        quantity: count,
+        image : allInfo?.imageUrl || "/public/bath/batn.png",
+      });
+    }
+   
+    setMsg("Item added to cart");
+    setTimeout(()=>{
+      setMsg(null)
+    },3000)
   };
 
   return (
@@ -80,7 +160,8 @@ const Page: FC<PageProps> = ({ params }) => {
           <div className="max-h-[500px] overflow-y-scroll scrollbar-hide">
             <div>
                <h3 className="text-lg font-semibold capitalize">{allInfo?.title}</h3> 
-        
+           
+
                <p className="text-sm py-1 font-normal text-gray-500">{allInfo?.des}</p>
 
 
@@ -91,7 +172,7 @@ const Page: FC<PageProps> = ({ params }) => {
                <FaStar size={20} className="text-yellow-400"/>
                <FaStar size={20} className="text-yellow-400"/>
                </div>
-               <p className="text-xl font-bold py-2">{allInfo?.price} <del className="text-base font-semibold text-gray-500">{allInfo?.oldPrice} Off</del></p>
+               <p className="text-xl font-bold py-2">${totalPrice.toFixed(2)} <del className="text-base font-semibold text-gray-500">{allInfo?.oldPrice} Off</del></p>
                  
           
 
@@ -140,7 +221,7 @@ const Page: FC<PageProps> = ({ params }) => {
                   <div className="p-4">
                     <h3 className="text-2xl font-semibold ">Shipping Policy</h3>
                     <p className="text-sm	 font-medium mt-1 text-gray-500">
-                    Your order means a lot to us. That's why we offer fast, safe and reliable delivery options for every item.</p>
+                    Your order means a lot to us. That&apos;s why we offer fast, safe and reliable delivery options for every item.</p>
 
                     <Link href="#" className="underline text-red-600 mt-2">Shipping Policy</Link>
                   
@@ -171,17 +252,20 @@ const Page: FC<PageProps> = ({ params }) => {
                 <button 
                   type="button" 
                   className="text-3xl font-semibold px-4 py-1  hover:bg-gray-200  transition-all"
-                  onClick={()=>{
-                    setCount(count + 1)
-                    setMsg("")
-                  }}
+                  onClick={incrementCount}
                 >
                   +
                 </button>
               </div>
 
                 <div>
-                  <button className="w-full bg-black px-6 shadow-md py-2 rounded-full text-white text-base font-semibold hover:bg-[#232323]">Add to cart</button>
+                  <button type="button"
+                   className={`${isInCart ? 'bg-red-500 text-white' :'bg-black text-white' } w-full  px-6 shadow-md py-2 rounded-full  text-base font-semibold hover:bg-[#232323]`}
+                   onClick={addItemToCart}
+                   disabled={isInCart}
+                   >
+                    {isInCart ? "Disable " :" Add to cart"}
+                   </button>
                 </div>
               </div>
         {/* counter and Add to cart end */}
@@ -213,9 +297,12 @@ const Page: FC<PageProps> = ({ params }) => {
             
           </div>
         </div>
+ 
       </MaxWidthWrapper>
     </section>
   );
 };
 
 export default Page;
+
+

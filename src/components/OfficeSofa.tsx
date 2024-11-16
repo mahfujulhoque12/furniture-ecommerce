@@ -23,7 +23,7 @@ const OfficeSofa = () =>{
         <section className="py-5 md:py-10">
             <MaxWidthWrapper>
             <div className="flex flex-col md:flex-row justify-between">
-                <h1 className="text-lg  md:text-2xl font-semibold text-black capitalize">Office Sofa</h1>
+                <h1 className="text-lg  text-center  sm:text-start md:text-2xl font-semibold text-black capitalize">Office Sofa</h1>
 
                 <div className="flex justify-end md:justify-start">
                 <button type="button" className="text-base font-normal hover:text-red-600">View All</button>
@@ -33,7 +33,7 @@ const OfficeSofa = () =>{
             <CarouselContent>
                 {chairData?.map((card)=> (
                         <CarouselItem 
-                        className="basis-1/2 md:basis-1/3 lg:basis-1/5 mt-5 " 
+                        className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/5 mt-5 " 
                         key={card.id}
                     >
                         <div  onClick={() => handleDetails(card.slug)} className="p-3 rounded-lg border shadow-sm h-full flex flex-col cursor-pointer ">

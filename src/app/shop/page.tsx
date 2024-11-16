@@ -1,7 +1,8 @@
 import ShopComponent from '@/components/ShopComponent';
 import React from 'react'
 
-export const page = () => {
+
+const Page = () => {
   return (
     <div>
         <ShopComponent/>
@@ -9,4 +10,4 @@ export const page = () => {
   )
 }
 
-export default page;
+export default Page;

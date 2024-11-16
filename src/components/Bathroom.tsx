@@ -35,7 +35,7 @@ const Bathroom = () =>{
             <Carousel>
             <CarouselContent>
                 {cardData?.map((card)=> (
-                        <CarouselItem className="basis-1/2 md:basis-1/3 lg:basis-1/5 mt-8" key={card.id}>
+                        <CarouselItem className=" basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/5 mt-8" key={card.id}>
                             <div
                             onClick = {()=> handleDetails(card.slug)}
                             className="cursor-pointer"

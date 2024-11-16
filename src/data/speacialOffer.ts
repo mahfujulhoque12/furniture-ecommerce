@@ -17,7 +17,7 @@ type CardData = {
     image:string;
     title:string;
     name:string;
-    price:string;
+    price:number;
     oldPrice:string;
     des:string;
     moreImg:string [];
@@ -38,7 +38,7 @@ export const cardData : CardData [] =[
         image:speacial.src,
         title:"upto 70% discount",
         name:"North Valley Spruce",
-        price:"$250",
+        price:250,
         des:"Lorem Ipsum is simply dummy  of the printing and typesetting ...",
         oldPrice:"$280",
         moreImg:[speacial.src,speacial8.src,speacial4.src,speacial6.src,],
@@ -49,7 +49,7 @@ export const cardData : CardData [] =[
         image:speacial1.src,
         title:"upto 70% discount",
         name:"North Valley Spruce",
-        price:"$250",
+         price:250,
         des:"Lorem Ipsum is simply dummy  of the printing and typesetting ...",
         oldPrice:"$280",
         moreImg:[speacial.src,speacial8.src,speacial4.src,speacial6.src,], 
@@ -59,7 +59,7 @@ export const cardData : CardData [] =[
         image:speacial2.src,
         title:"upto 70% discount",
         name:"North Valley Spruce",
-        price:"$250",
+         price:250,
         des:"Lorem Ipsum is simply dummy  of the printing and typesetting ...",
         oldPrice:"$280",
         moreImg:[speacial.src,speacial8.src,speacial4.src,speacial6.src,],
@@ -70,7 +70,7 @@ export const cardData : CardData [] =[
         image:speacial3.src,
         title:"upto 70% discount",
         name:"North Valley Spruce",
-        price:"$250",
+         price:250,
         des:"Lorem Ipsum is simply dummy  of the printing and typesetting ...",
         oldPrice:"$280",
             moreImg:[speacial.src,speacial8.src,speacial4.src,speacial6.src,],
@@ -81,7 +81,7 @@ export const cardData : CardData [] =[
         image:speacial4.src,
         title:"upto 70% discount",
         name:"North Valley Spruce",
-        price:"$250",
+         price:250,
         des:"Lorem Ipsum is simply dummy  of the printing and typesetting ...",
         oldPrice:"$280",
             moreImg:[speacial.src,speacial8.src,speacial4.src,speacial6.src,],
@@ -92,7 +92,7 @@ export const cardData : CardData [] =[
         image:speacial5.src,
         title:"upto 70% discount",
         name:"North Valley Spruce",
-        price:"$250",
+         price:250,
         des:"Lorem Ipsum is simply dummy  of the printing and typesetting ...",
         oldPrice:"$280",
             moreImg:[speacial.src,speacial8.src,speacial4.src,speacial6.src,],
@@ -103,7 +103,7 @@ export const cardData : CardData [] =[
         image:speacial6.src,
         title:"upto 70% discount",
         name:"North Valley Spruce",
-        price:"$250",
+         price:250,
         des:"Lorem Ipsum is simply dummy  of the printing and typesetting ...",
         oldPrice:"$280",
             moreImg:[speacial.src,speacial8.src,speacial4.src,speacial6.src,],
@@ -114,7 +114,7 @@ export const cardData : CardData [] =[
         image:speacial7.src,
         title:"upto 70% discount",
         name:"North Valley Spruce",
-        price:"$250",
+         price:250,
         des:"Lorem Ipsum is simply dummy  of the printing and typesetting ...",
         oldPrice:"$280",
             moreImg:[speacial.src,speacial8.src,speacial4.src,speacial6.src,],
@@ -125,7 +125,7 @@ export const cardData : CardData [] =[
         image:speacial8.src,
         title:"upto 70% discount",
         name:"North Valley Spruce",
-        price:"$250",
+         price:250,
         des:"Lorem Ipsum is simply dummy  of the printing and typesetting ...",
         oldPrice:"$280",
             moreImg:[speacial.src,speacial8.src,speacial4.src,speacial6.src,],
@@ -137,7 +137,7 @@ export const cardData : CardData [] =[
         des:"Lorem Ipsum is simply dummy  of the printing and typesetting ...",
         title:"upto 70% discount",
         name:"North Valley Spruce",
-        price:"$250",
+         price:250,
         oldPrice:"$280",
         moreImg:[speacial.src,speacial8.src,speacial4.src,speacial6.src,],
     },

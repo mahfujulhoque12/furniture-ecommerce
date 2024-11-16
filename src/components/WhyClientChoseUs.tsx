@@ -1,7 +1,6 @@
 "use client"
 import { useEffect } from "react";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
-import SubHeading from "./typography/SubHeading";
 
 function WhyClientChoseUs() {
   useEffect(() => {

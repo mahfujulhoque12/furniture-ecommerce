@@ -14,7 +14,7 @@ type CardData = {
     image:string;
     title:string;
     name:string;
-    price:string;
+    price:number;
     oldPrice:string;
     des:string;
     moreImg:string [];
@@ -34,7 +34,7 @@ export const cardData : CardData [] =[
         image:bath8.src,
         title:"upto 35% discount",
         name:"North Valley Spruce",
-        price:"$250",
+        price:250,
         des:"Lorem Ipsum is simply  text of the  and typesetting industry...",
         oldPrice:"$280",
         moreImg:[bath.src,bath8.src, bath6.src, bath3.src],
@@ -45,7 +45,7 @@ export const cardData : CardData [] =[
         image:bath6.src,
         title:"upto 35% discount",
         name:"North Valley Spruce",
-        price:"$250",
+          price:250,
         des:"Lorem Ipsum is simply  text of the  and typesetting industry...",
         oldPrice:"$280",
         moreImg:[bath.src,bath8.src, bath6.src, bath3.src],
@@ -56,7 +56,7 @@ export const cardData : CardData [] =[
         image:bath2.src,
         title:"upto 35% discount",
         name:"North Valley Spruce",
-        price:"$250",
+          price:250,
         des:"Lorem Ipsum is simply  text of the  and typesetting industry...",
         oldPrice:"$280",
         moreImg:[bath.src,bath8.src, bath6.src, bath3.src],
@@ -66,7 +66,7 @@ export const cardData : CardData [] =[
         image:bath3.src,
         title:"upto 35% discount",
         name:"North Valley Spruce",
-        price:"$250",
+          price:250,
         des:"Lorem Ipsum is simply  text of the  and typesetting industry...",
         oldPrice:"$280",
         moreImg:[bath.src,bath8.src, bath6.src, bath3.src],
@@ -76,7 +76,7 @@ export const cardData : CardData [] =[
         image:bath4.src,
         title:"upto 35% discount",
         name:"North Valley Spruce",
-        price:"$250",
+          price:250,
         des:"Lorem Ipsum is simply  text of the  and typesetting industry...",
         oldPrice:"$280",
         moreImg:[bath.src,bath8.src, bath6.src, bath3.src],
@@ -86,7 +86,7 @@ export const cardData : CardData [] =[
         image:bath5.src,
         title:"upto 35% discount",
         name:"North Valley Spruce",
-        price:"$250",
+          price:250,
         des:"Lorem Ipsum is simply  text of the  and typesetting industry...",
         oldPrice:"$280",
         moreImg:[bath.src,bath8.src, bath6.src, bath3.src],
@@ -96,7 +96,7 @@ export const cardData : CardData [] =[
         image:bath6.src,
         title:"upto 35% discount",
         name:"North Valley Spruce",
-        price:"$250",
+          price:250,
         des:"Lorem Ipsum is simply  text of the  and typesetting industry...",
         oldPrice:"$280",
         moreImg:[bath.src,bath8.src, bath6.src, bath3.src],
@@ -106,7 +106,7 @@ export const cardData : CardData [] =[
         image:bath7.src,
         title:"upto 35% discount",
         name:"North Valley Spruce",
-        price:"$250",
+          price:250,
         des:"Lorem Ipsum is simply  text of the  and typesetting industry...",
         oldPrice:"$280",
         moreImg:[bath.src,bath8.src, bath6.src, bath3.src],
@@ -116,7 +116,7 @@ export const cardData : CardData [] =[
         image:bath.src,
         title:"upto 35% discount",
         name:"North Valley Spruce",
-        price:"$250",
+          price:250,
         des:"Lorem Ipsum is simply  text of the  and typesetting industry...",
         oldPrice:"$280",
         moreImg:[bath.src,bath8.src, bath6.src, bath3.src],
@@ -128,7 +128,7 @@ export const cardData : CardData [] =[
         des:"Lorem Ipsum is simply  text of the  and typesetting industry...",
         title:"upto 35% discount",
         name:"North Valley Spruce",
-        price:"$250",
+          price:250,
         oldPrice:"$280",
         moreImg:[bath.src,bath8.src, bath6.src, bath3.src],
     },

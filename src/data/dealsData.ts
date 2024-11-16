@@ -12,7 +12,7 @@ type CardData = {
     image:string;
     title:string;
     name:string;
-    price:string;
+    price:number;
     oldPrice:string;
     des:string;
     moreImg:string [];
@@ -32,7 +32,7 @@ export const cardData : CardData [] =[
         image:deal1.src,
         title:"Deal of the Day",
         name:"North Valley Spruce",
-        price:"$250",
+        price:250,
         des:"Lorem Ipsum is simply dummy text of the Lorem Ipsum has...",
         oldPrice:"$280",
         moreImg:[deal1.src, deal2.src, deal6.src, deal4.src],
@@ -43,7 +43,7 @@ export const cardData : CardData [] =[
         image:deal6.src,
         title:"Deal of the Day",
         name:"North Valley Spruce",
-        price:"$250",
+         price:250,
          des:"Lorem Ipsum is simply dummy text of the Lorem Ipsum has...",
         oldPrice:"$280",
         moreImg:[deal1.src, deal2.src, deal6.src, deal4.src],
@@ -53,7 +53,7 @@ export const cardData : CardData [] =[
         image:deal2.src,
         title:"Deal of the Day",
         name:"North Valley Spruce",
-        price:"$250",
+         price:250,
          des:"Lorem Ipsum is simply dummy text of the Lorem Ipsum has...",
         oldPrice:"$280",
         moreImg:[deal1.src, deal2.src, deal6.src, deal4.src],
@@ -63,7 +63,7 @@ export const cardData : CardData [] =[
         image:deal3.src,
         title:"Deal of the Day",
         name:"North Valley Spruce",
-        price:"$250",
+         price:250,
          des:"Lorem Ipsum is simply dummy text of the Lorem Ipsum has...",
         oldPrice:"$280",
         moreImg:[deal1.src, deal2.src, deal6.src, deal4.src],
@@ -73,7 +73,7 @@ export const cardData : CardData [] =[
         image:deal4.src,
         title:"Deal of the Day",
         name:"North Valley Spruce",
-        price:"$250",
+         price:250,
          des:"Lorem Ipsum is simply dummy text of the Lorem Ipsum has...",
         oldPrice:"$280",
         moreImg:[deal1.src, deal2.src, deal6.src, deal4.src],
@@ -83,7 +83,7 @@ export const cardData : CardData [] =[
         image:deal5.src,
         title:"Deal of the Day",
         name:"North Valley Spruce",
-        price:"$250",
+         price:250,
          des:"Lorem Ipsum is simply dummy text of the Lorem Ipsum has...",
         oldPrice:"$280",
         moreImg:[deal1.src, deal2.src, deal6.src, deal4.src],
@@ -93,7 +93,7 @@ export const cardData : CardData [] =[
         image:deal6.src,
         title:"Deal of the Day",
         name:"North Valley Spruce",
-        price:"$250",
+         price:250,
          des:"Lorem Ipsum is simply dummy text of the Lorem Ipsum has...",
         oldPrice:"$280",
         moreImg:[deal1.src, deal2.src, deal6.src, deal4.src],
@@ -103,7 +103,7 @@ export const cardData : CardData [] =[
         image:deal3.src,
         title:"Deal of the Day",
         name:"North Valley Spruce",
-        price:"$250",
+         price:250,
          des:"Lorem Ipsum is simply dummy text of the Lorem Ipsum has...",
         oldPrice:"$280",
         moreImg:[deal1.src, deal2.src, deal6.src, deal4.src],
@@ -113,7 +113,7 @@ export const cardData : CardData [] =[
         image:deal2.src,
         title:"Deal of the Day",
         name:"North Valley Spruce",
-        price:"$250",
+         price:250,
          des:"Lorem Ipsum is simply dummy text of the Lorem Ipsum has...",
         oldPrice:"$280",
         moreImg:[deal1.src, deal2.src, deal6.src, deal4.src],
@@ -125,7 +125,7 @@ export const cardData : CardData [] =[
          des:"Lorem Ipsum is simply dummy text of the Lorem Ipsum has...",
         title:"Deal of the Day",
         name:"North Valley Spruce",
-        price:"$250",
+         price:250,
         oldPrice:"$280",
         moreImg:[deal1.src, deal2.src, deal6.src, deal4.src],
     },

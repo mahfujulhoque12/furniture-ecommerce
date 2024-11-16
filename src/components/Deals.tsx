@@ -34,14 +34,14 @@ const Deals = () =>{
             <Carousel>
             <CarouselContent>
                 {cardData?.map((card)=> (
-                        <CarouselItem className="basis-1/2 md:basis-1/3 lg:basis-1/5 mt-8" key={card.id}>
+                        <CarouselItem className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/5 mt-8" key={card.id}>
                             <div
                             onClick = {()=>handleDetails(card.slug)}
                             className="cursor-pointer h-full"
                             >
                             <div className="p-3 rounded-lg border h-full  shadow-sm">
                                 <div className=" transition-all duration-300 hover:scale-[101%]">
-                                <Image src={card.image} alt="img" width={400} height={300} className="rounded-md w-full h-[200px] object-cover"/>
+                                <Image src={card.image} alt="img" width={400} height={300} className="rounded-md w-full  h-[200px] object-cover"/>
                                 <h3 className=" mt-[-30px] z-10 relative bg-black text-white px-3 py-1 w-full text-center rounded-md">{card.title}</h3>
                                 <h4 className="text-lg font-semibold text-start py-1">{card.name}</h4>
                                 <p className="text-sm text-start font-normal mb-1">{card.des}</p>

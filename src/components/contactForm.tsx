@@ -10,7 +10,6 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
 import Link from "next/link";
-import Image from "next/image";
 import ContactFormInfo from "./contactFormInfo";
 
 const ContactForm = () => {

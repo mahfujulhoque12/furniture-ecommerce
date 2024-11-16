@@ -5,7 +5,7 @@ import set from '/public/set/set.png';
 import set2 from '/public/set/set2.png';
 import set3 from '/public/set/set3.png';
 import set4 from '/public/set/set4.png';
-import clsx from 'clsx';
+import Link from 'next/link';
 
 interface CardData {
   id: number;
@@ -25,7 +25,7 @@ const SetPac: React.FC = () => {
   return (
     <section className="py-5 lg:py-10">
       <MaxWidthWrapper>
-        <h1 className="text-lg md:text-2xl font-semibold text-black capitalize">
+        <h1 className="text-lg text-center  sm:text-start md:text-2xl font-semibold text-black capitalize">
           Combo Pack only for this holiday
         </h1>
 
@@ -35,7 +35,8 @@ const SetPac: React.FC = () => {
           key={card.id}
           className="cursor-pointer shadow-md p-3 transition-colors duration-150 border hover:bg-gray-100 rounded-md flex flex-col transform hover:scale-100"
           aria-label={`View details of ${card.title}`}
-        >
+          >
+          <Link href="/shop"> 
           <Image
             src={card.image}
             alt={card.title}
@@ -46,6 +47,7 @@ const SetPac: React.FC = () => {
           />
           <h2 className="mt-3 text-2xl font-semibold">{card.title}</h2>
           <p className="text-sm font-normal mt-3">{card.link}</p>
+          </Link>  
         </div>
         
           

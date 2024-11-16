@@ -8,6 +8,8 @@ import Link from "next/link";
 import { BsListColumnsReverse } from "react-icons/bs";
 import { FaColumns } from "react-icons/fa";
 import { useRouter } from "next/navigation";
+import { IoMdSearch } from "react-icons/io";
+
 
 const ShopComponent = () => {
   const [data, setData] = useState(cardData);
@@ -16,18 +18,20 @@ const ShopComponent = () => {
   const [maxPrice, setMaxPrice] = useState<number>(320);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
   const [isColumnLayout, setIsColumnLayout] = useState(false);
-
+  const [searchQuery, setSearchQuery] = useState('');
   const router = useRouter();
-
+  
   const handleDetails= (slug: string) =>{
-      router.push(`/shop/${slug}`)
-  }
+    router.push(`/shop/${slug}`)
+}
 
+const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const query = e.target.value;
+  setSearchQuery(query);
+  filterData(active, maxPrice, selectedColor, query);
+};
 
-
-
-// Filter items by category
-const filterData = (category: string, maxPrice: number = 320, color: string | null = null) => {
+const filterData = (category: string, maxPrice: number = 320, color: string | null = null, searchQuery: string = '', checkboxCategory: string | null = null) => {
   let filteredData = cardData;
 
   // Filter by category
@@ -36,54 +40,56 @@ const filterData = (category: string, maxPrice: number = 320, color: string | nu
   }
 
   // Filter by price
-  filteredData = filteredData.filter((card) => {
-    const price = parseFloat(card.price.replace('$', ''));
-    return price <= maxPrice;
-  });
+  filteredData = filteredData.filter((card) => card.price <= maxPrice);
+
+  // Filter by checkbox category (bestseller, featured, latest, etc.)
+  if (checkboxCategory) {
+    filteredData = filteredData.filter((card) => card.category === checkboxCategory);
+  }
 
   // Filter by color
   if (color) {
     filteredData = filteredData.filter((card) => card.color?.toLowerCase() === color.toLowerCase());
   }
 
+  // Filter by search query
+  if (searchQuery) {
+    filteredData = filteredData.filter((product) =>
+      product.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }
+
   setData(filteredData);
 };
 
-// Handle category button click
 const handleButtonClick = (category: string) => {
-  // Reset other filters when category changes
   setActive(category);
   setCheckbox(null); // Reset checkbox
   setSelectedColor(null); // Reset color
   setMaxPrice(320); // Reset price filter
-  filterData(category); // Filter by category
+  filterData(category, maxPrice, selectedColor, searchQuery);
 };
 
-// Handle checkbox filter
 const handleCheckboxClick = (category: string) => {
-  // Reset other filters when checkbox changes
   setCheckbox(category);
   setActive("all"); // Reset category radio button
   setSelectedColor(null); // Reset color
   setMaxPrice(320); // Reset price filter
-  filterData(category); // Filter by checkbox category
+  filterData(active, maxPrice, selectedColor, searchQuery, category);
 };
 
-// Handle color button click
 const handleColorClick = (color: string) => {
-  // Reset other filters when color changes
   setSelectedColor(color);
   setActive("all"); // Reset category radio button
   setCheckbox(null); // Reset checkbox
   setMaxPrice(320); // Reset price filter
-  filterData(active, maxPrice, color); // Filter by color
+  filterData(active, maxPrice, color, searchQuery);
 };
 
-// Handle price range change
 const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
   const value = parseInt(event.target.value, 10);
   setMaxPrice(value);
-  filterData(active, value, selectedColor); // Filter by price
+  filterData(active, value, selectedColor, searchQuery);
 };
 
 
@@ -92,12 +98,12 @@ const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       <MaxWidthWrapper>
         <div className="flex gap-4">
           <div className="basis-[35%]">
-            <h2 className="text-lg font-medium text-black border-b">
+            <h2 className="text-base sm:text-lg font-medium text-black border-b">
               Category products
             </h2>
             {/* radio start */}
             <div>
-              <h4 className="text-base font-semibold py-2">Find your products</h4>
+              <h4 className="text-sm sm:text-base font-normal sm:font-semibold py-2">Find your products</h4>
               <div>
                 <label className="flex items-center space-x-2 cursor-pointer">
                   <input
@@ -106,9 +112,9 @@ const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
                     value="all"
                     onChange={() => handleButtonClick("all")}
                     checked={active === "all"}
-                    className="w-5 h-5 text-black border-gray-300 rounded-full transition duration-200"
+                    className="w-3 h-3 sm:w-5 sm:h-5 text-black border-gray-300 rounded-full transition duration-200"
                   />
-                  <span className="text-base font-medium text-gray-700">All</span>
+                  <span className="text-sm font-noraml sm:text-base sm:font-medium text-gray-700">All</span>
                 </label>
               </div>
               <div>
@@ -119,9 +125,9 @@ const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
                     value="bestseller"
                     onChange={() => handleButtonClick("bestseller")}
                     checked={active === "bestseller"}
-                    className="w-5 h-5 text-black border-gray-300 rounded-full transition duration-200"
+                    className="w-3 h-3 sm:w-5 sm:h-5 text-black border-gray-300 rounded-full transition duration-200"
                   />
-                  <span className="text-base font-medium text-gray-700">Bestseller</span>
+                  <span className="text-sm font-noraml sm:text-base sm:font-medium text-gray-700">Bestseller</span>
                 </label>
               </div>
               <div>
@@ -132,9 +138,9 @@ const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
                     value="featured"
                     onChange={() => handleButtonClick("featured")}
                     checked={active === "featured"}
-                    className="w-5 h-5 text-black border-gray-300 rounded-full transition duration-200"
+                    className="w-3 h-3 sm:w-5 sm:h-5 text-black border-gray-300 rounded-full transition duration-200"
                   />
-                  <span className="text-base font-medium text-gray-700">Featured</span>
+                  <span className="text-sm font-noraml sm:text-base sm:font-medium text-gray-700">Featured</span>
                 </label>
               </div>
               <div>
@@ -145,9 +151,9 @@ const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
                     value="latest"
                     onChange={() => handleButtonClick("latest")}
                     checked={active === "latest"}
-                    className="w-5 h-5 text-black border-gray-300 rounded-full transition duration-200"
+                    className="w-3 h-3 sm:w-5 sm:h-5 text-black border-gray-300 rounded-full transition duration-200"
                   />
-                  <span className="text-base font-medium text-gray-700">Latest</span>
+                  <span className="text-sm font-noraml sm:text-base sm:font-medium text-gray-700">Latest</span>
                 </label>
               </div>
             </div>
@@ -155,7 +161,7 @@ const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 
             {/* Checkbox button start*/}
             <div>
-              <h4 className="text-base font-semibold py-2 mt-4">Choose your products</h4>
+              <h4 className="text-sm sm:text-base font-normal sm:font-semibold py-2">Find your products</h4>
               <div className="flex items-center space-x-3 cursor-pointer">
                 <input
                   type="checkbox"
@@ -163,9 +169,9 @@ const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
                   value="bestseller"
                   checked={checkbox === 'bestseller'}
                   onChange={() => handleCheckboxClick('bestseller')}
-                  className="w-5 h-5 text-black border-gray-300 rounded-sm checked:bg-black checked:border-black transition duration-200"
+                  className="w-3 h-3 sm:w-5 sm:h-5 text-black border-gray-300 rounded-sm checked:bg-black checked:border-black transition duration-200"
                 />
-                <span className={`text-base font-medium ${checkbox === 'bestseller' ? 'text-black' : 'text-gray-700'} transition duration-200`}>
+                <span  className="text-sm font-noraml sm:text-base sm:font-medium text-gray-700">
                   Bestseller
                 </span>
               </div>
@@ -176,9 +182,9 @@ const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
                   value="latest"
                   checked={checkbox === 'latest'}
                   onChange={() => handleCheckboxClick('latest')}
-                  className="w-5 h-5 text-black border-gray-300 rounded-sm checked:bg-black checked:border-black transition duration-200"
+                  className="w-3 h-3 sm:w-5 sm:h-5 text-black border-gray-300 rounded-sm checked:bg-black checked:border-black transition duration-200"
                 />
-                <span className={`text-base font-medium ${checkbox === 'latest' ? 'text-black' : 'text-gray-700'} transition duration-200`}>
+                <span  className="text-sm font-noraml sm:text-base sm:font-medium text-gray-700">
                   Latest
                 </span>
               </div>
@@ -189,9 +195,10 @@ const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
                   value="featured"
                   checked={checkbox === 'featured'}
                   onChange={() => handleCheckboxClick('featured')}
-                  className="w-5 h-5 text-black border-gray-300 rounded-sm checked:bg-black checked:border-black transition duration-200"
+                  className="w-3 h-3 sm:w-5 sm:h-5 text-black border-gray-300 rounded-sm checked:bg-black checked:border-black transition duration-200"
                 />
-                <span className={`text-base font-medium ${checkbox === 'featured' ? 'text-black' : 'text-gray-700'} transition duration-200`}>
+                <span className=
+                "text-sm font-noraml sm:text-base sm:font-medium text-gray-700">
                   Featured
                 </span>
               </div>
@@ -202,22 +209,22 @@ const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         <div>
         
           <div>
-              <h3 className="text-base font-semibold py-2 mt-4">Find your products by color</h3>
+              <h3 className="text-sm sm:text-base font-normal sm:font-semibold py-2">Find your products by color</h3>
               <div className="flex gap-2">
                 <button
-                  className={`h-8 rounded-full w-8 ${selectedColor === 'red' ? 'border-2 border-black' : ''} bg-red-600`}
+                  className={`h-5 sm:h-8 rounded-full w-5 sm:w-8 ${selectedColor === 'red' ? 'border-2 border-black' : ''} bg-red-600`}
                   onClick={() => handleColorClick('red')}
                 ></button>
                 <button
-                  className={`h-8 rounded-full w-8 ${selectedColor === 'green' ? 'border-2 border-black' : ''} bg-green-600`}
+                  className={`h-5 sm:h-8 rounded-full w-5 sm:w-8 ${selectedColor === 'green' ? 'border-2 border-black' : ''} bg-green-600`}
                   onClick={() => handleColorClick('green')}
                 ></button>
                 <button
-                  className={`h-8 rounded-full w-8 ${selectedColor === 'yellow' ? 'border-2 border-black' : ''} bg-yellow-600`}
+                  className={`h-5 sm:h-8 rounded-full w-5 sm:w-8 ${selectedColor === 'yellow' ? 'border-2 border-black' : ''} bg-yellow-600`}
                   onClick={() => handleColorClick('yellow')}
                 ></button>
                 <button
-                  className={`h-8 rounded-full w-8 ${selectedColor === 'sky' ? 'border-2 border-black' : ''} bg-sky-600`}
+                  className={`h-5 sm:h-8 rounded-full w-5 sm:w-8 ${selectedColor === 'sky' ? 'border-2 border-black' : ''} bg-sky-600`}
                   onClick={() => handleColorClick('sky')}
                 ></button>
               </div>
@@ -228,9 +235,9 @@ const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 
             {/* Price range start*/}
             <div>
-              <h4 className="text-base font-semibold py-2 mt-4">Choose products depending on price</h4>
+              <h4 className="text-sm sm:text-base font-normal sm:font-semibold py-2">Choose products depending on price</h4>
               <div className="flex flex-col space-y-2">
-                <label className="text-base font-medium text-gray-700">Up to ${maxPrice}</label>
+                <label className="text-sm sm:text-base font-medium text-gray-700">Up to ${maxPrice}</label>
                 <input
                   type="range"
                   min="0"
@@ -238,9 +245,9 @@ const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
                   step="10"
                   value={maxPrice}
                   onChange={handlePriceChange}
-                  className="w-[60%] h-2 bg-gray-200 rounded-full appearance-none cursor-pointer focus:outline-none"
+                  className="w-full sm:w-[60%] h-2 bg-gray-200 rounded-full appearance-none cursor-pointer focus:outline-none"
                 />
-                <div className="flex w-[60%] justify-between text-sm text-gray-500">
+                <div className="flex w-full sm:w-[60%] justify-between text-sm text-gray-500">
                   <span>$0</span>
                   <span>$320</span>
                 </div>
@@ -249,8 +256,8 @@ const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
           {/* Price range end*/}
           </div>
 
-          <div className="basis-[65%]">
-  <div className="flex justify-between mb-5">
+          <div className="basis-[65%]  w-[60%] sm:w-full">
+      <div className="flex flex-col md:flex-row gap-5 justify-between  mb-5">
     <div className="flex gap-2">
       <button
         className={`rounded-sm p-2 w-10 h-10 ${
@@ -279,24 +286,30 @@ const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       </button>
     </div>
 
-    <div>
+    <div className="flex items-center gap-2  border rounded-md placeholder:text-black px-3 py-1">
+    <IoMdSearch size={20}/>
       <input
         type="text"
         placeholder="Find Your Product.."
-        className="outline-none border rounded-md placeholder:text-black px-3 py-1"
+        className="outline-none"
+        value={searchQuery}
+        onChange={handleSearch}
       />
     </div>
   </div>
 
   {/* Scrollable product grid */}
   <div className="max-h-[500px] overflow-y-scroll scrollbar-hide">
-    <div
-      className={`grid gap-3 ${
-        isColumnLayout ? 'grid-cols-2' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
-      }`}
-    >
-      {data.map((card) => (
-        <div key={card.id} className="h-full">
+  <div
+    className={`grid gap-3 ${
+      isColumnLayout
+        ? 'grid-cols-1 md:grid-cols-2' // For column layout
+        : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ' // Responsive grid
+    }`}
+  >
+    {data.length > 0 ? (
+      data.map((card) => (
+        <div key={card.id} className="h-full ">
           <div className="cursor-pointer h-full" onClick={() => handleDetails(card.slug)}>
             <div className="p-3 items-start h-full rounded-lg border shadow-sm">
               <div className="transition-all duration-300 hover:scale-[101%] h-full">
@@ -305,13 +318,13 @@ const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
                   alt="img"
                   width={400}
                   height={300}
-                  className="rounded-md w-full h-[200px] object-cover"
+                  className="rounded-md w-full h-auto object-cover" // Make image height responsive
                 />
-                <h3 className="mt-[-30px] z-10 relative bg-black text-white px-3 py-1 w-full rounded-md">
-                  {card.title}
+                <h3 className="mt-[-30px] text-sm z-10 relative bg-black text-white px-3 py-1 w-full rounded-md">
+                  {card.caption}
                 </h3>
-                <h4 className="text-lg font-semibold text-start py-1">{card.title}</h4>
-                <p className="text-sm text-start font-normal mb-1">{card.des.slice(0,58)}...</p>
+                <h4 className="text-base font-semibold text-start py-1">{card.title}</h4>
+                <p className="text-sm text-start font-normal mb-1">{card.des.slice(0, 56)}...</p>
                 <p className="text-base font-bold text-start flex gap-2">
                   {card.price} <del className="text-gray-400">{card.oldPrice}</del>
                 </p>
@@ -327,9 +340,13 @@ const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
             </div>
           </div>
         </div>
-      ))}
-    </div>
+      ))
+    ) : (
+      "no products found"
+    )}
   </div>
+</div>
+
 </div>
 
         </div>

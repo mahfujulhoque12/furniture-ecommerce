@@ -12,7 +12,7 @@ import { GiCutDiamond } from "react-icons/gi";
 import Link from 'next/link';
 import ServicesFaq from "@/components/ServicesFaq";
 import { useCart } from "@/context/CartContext";
-import { FC, useEffect } from "react";
+import { useEffect } from "react";
 
 
 import {
@@ -35,11 +35,11 @@ const Page: FC<PageProps> = ({ params }) => {
   
   const { slug } = use(params);
   const allInfo = cardData.find((card) => card.slug === slug);
-  const itemPrice = allInfo?.price || 0;
-  
-  const [mainImage, setMainImage] = useState(allInfo?.imageUrl);
-  const [msg, setMsg] = useState<string | null>(null);
 
+   // Ensure itemPrice has a default value of 0 if `allInfo` is undefined
+  const itemPrice = allInfo?.price ?? 0;
+  const [mainImage, setMainImage] = useState<string | null>(allInfo?.imageUrl ?? null);
+  const [msg, setMsg] = useState<string | null>(null);
   const { addToCart, updateCartItem ,resetItemFlag, cartItems  } = useCart();
 
   // Load initial count and price from localStorage
@@ -53,33 +53,44 @@ const Page: FC<PageProps> = ({ params }) => {
     // Check if item is already in the cart
     const isInCart = cartItems.some((item) => item.id === allInfo?.id);
 
+
+
   // Save count and totalPrice to localStorage whenever they change
   useEffect(() => {
     localStorage.setItem("count", JSON.stringify(count));
     localStorage.setItem("totalPrice", JSON.stringify(totalPrice));
   }, [count, totalPrice]);
 
-  useEffect(() => {
-    setTotalPrice(count * itemPrice);
-  }, [count, itemPrice]);
 
-    // Reset to initial values if the item is deleted from the cart
+
+  
   useEffect(() => {
+    // Update totalPrice only if allInfo exists and has a price
+    if (allInfo) {
+      setTotalPrice(count * itemPrice);
+    }
+  }, [count, itemPrice, allInfo]);
+
+
+   // Reset to initial values if the item is deleted from the cart
+
+   useEffect(() => {
     const itemInCart = cartItems.find((item) => item.id === allInfo?.id);
 
     if (!itemInCart) {
       setCount(1);
       setTotalPrice(itemPrice);
-      resetItemFlag(allInfo?.id);
+      if (allInfo) resetItemFlag(allInfo.id);
     }
   }, [cartItems, allInfo, itemPrice, resetItemFlag]);
+
 
 
   const incrementCount = () => {
     const newCount = count + 1;
     setCount(newCount);
     setTotalPrice(newCount * itemPrice);
-    updateCartItem(allInfo?.id, newCount);
+   if(allInfo) updateCartItem(allInfo?.id, newCount);
   };
 
   const decrementCount = () => {
@@ -87,7 +98,7 @@ const Page: FC<PageProps> = ({ params }) => {
       const newCount = count - 1;
       setCount(newCount);
       setTotalPrice(newCount * itemPrice);
-      updateCartItem(allInfo?.id, newCount);
+      if(allInfo) updateCartItem(allInfo?.id, newCount);
     } 
     else {
        setMsg("Minimum quantity is 1");
@@ -99,12 +110,17 @@ const Page: FC<PageProps> = ({ params }) => {
   };
 
   const addItemToCart = () => {
-    addToCart({
-      id: allInfo?.id,
-      name: allInfo?.title || "Unknown Item",
-      price: itemPrice,
-      quantity: count,
-    });
+    if(allInfo){
+      console.log("Adding to cart:", allInfo); // Log to verify `imageUrl`
+      addToCart({
+        id: allInfo?.id,
+        name: allInfo?.title || "Unknown Item",
+        price: itemPrice,
+        quantity: count,
+        image : allInfo?.imageUrl || "/public/bath/batn.png",
+      });
+    }
+   
     setMsg("Item added to cart");
     setTimeout(()=>{
       setMsg(null)
@@ -205,7 +221,7 @@ const Page: FC<PageProps> = ({ params }) => {
                   <div className="p-4">
                     <h3 className="text-2xl font-semibold ">Shipping Policy</h3>
                     <p className="text-sm	 font-medium mt-1 text-gray-500">
-                    Your order means a lot to us. That's why we offer fast, safe and reliable delivery options for every item.</p>
+                    Your order means a lot to us. That&apos;s why we offer fast, safe and reliable delivery options for every item.</p>
 
                     <Link href="#" className="underline text-red-600 mt-2">Shipping Policy</Link>
                   
@@ -244,7 +260,7 @@ const Page: FC<PageProps> = ({ params }) => {
 
                 <div>
                   <button type="button"
-                   className="w-full bg-black px-6 shadow-md py-2 rounded-full text-white text-base font-semibold hover:bg-[#232323]"
+                   className={`${isInCart ? 'bg-red-500 text-white' :'bg-black text-white' } w-full  px-6 shadow-md py-2 rounded-full  text-base font-semibold hover:bg-[#232323]`}
                    onClick={addItemToCart}
                    disabled={isInCart}
                    >

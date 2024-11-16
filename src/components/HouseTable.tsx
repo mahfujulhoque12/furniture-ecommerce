@@ -23,7 +23,7 @@ const HouseTable = () =>{
         <section className="py-5 md:py-10">
             <MaxWidthWrapper>
             <div className="flex flex-col md:flex-row justify-between">
-                <h1 className="text-lg  md:text-2xl font-semibold text-black capitalize">
+                <h1 className="text-lg text-center  sm:text-start  md:text-2xl font-semibold text-black capitalize">
                     House Table</h1>
 
                 <div className="flex justify-end md:justify-start">
@@ -33,8 +33,8 @@ const HouseTable = () =>{
             <Carousel>
             <CarouselContent>
             {tableData?.map((card)=> (
-                        <CarouselItem 
-                        className="basis-1/2 md:basis-1/3 lg:basis-1/5 mt-5 " 
+                        <CarouselItem
+                        className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/5 mt-5 " 
                         key={card.id}
                     >
                         <div  onClick={() => handleDetails(card.slug)} className="p-3 rounded-lg border shadow-sm h-full flex flex-col cursor-pointer ">
