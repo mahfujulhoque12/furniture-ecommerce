@@ -44,7 +44,7 @@ function useCarousel() {
 
 const Carousel = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> & CarouselProps
+  React.HTMLAttributes<HTMLDivElement> & CarouselProps & { scrollBy?: number }
 >(
   (
     {
@@ -54,6 +54,7 @@ const Carousel = React.forwardRef<
       plugins,
       className,
       children,
+      scrollBy = 2, // Default scroll behavior
       ...props
     },
     ref
@@ -78,25 +79,12 @@ const Carousel = React.forwardRef<
     }, [])
 
     const scrollPrev = React.useCallback(() => {
-      api?.scrollTo(api?.selectedScrollSnap() - 2) // Go back by 2 slides
-    }, [api])
+      api?.scrollTo(api?.selectedScrollSnap() - scrollBy) // Dynamic scroll
+    }, [api, scrollBy])
 
     const scrollNext = React.useCallback(() => {
-      api?.scrollTo(api?.selectedScrollSnap() + 2) // Advance by 2 slides
-    }, [api])
-    
-    const handleKeyDown = React.useCallback(
-      (event: React.KeyboardEvent<HTMLDivElement>) => {
-        if (event.key === "ArrowLeft") {
-          event.preventDefault()
-          scrollPrev()
-        } else if (event.key === "ArrowRight") {
-          event.preventDefault()
-          scrollNext()
-        }
-      },
-      [scrollPrev, scrollNext]
-    )
+      api?.scrollTo(api?.selectedScrollSnap() + scrollBy) // Dynamic scroll
+    }, [api, scrollBy])
 
     React.useEffect(() => {
       if (!api || !setApi) {
@@ -136,7 +124,6 @@ const Carousel = React.forwardRef<
       >
         <div
           ref={ref}
-          onKeyDownCapture={handleKeyDown}
           className={cn("relative", className)}
           role="region"
           aria-roledescription="carousel"
@@ -196,8 +183,8 @@ CarouselItem.displayName = "CarouselItem"
 
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement,
-  React.ComponentProps<typeof Button>
->(({ className, variant = "secondary", size = "icon", ...props }, ref) => {
+  React.ComponentProps<typeof Button> & { isSlider?: boolean }
+>(({ className, variant = "secondary",isSlider = false, size = "icon", ...props }, ref) => {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
 
   return (
@@ -209,7 +196,9 @@ const CarouselPrevious = React.forwardRef<
         className={cn(
           "absolute  bg-black shadow-md  h-10 w-10 rounded-full hover:bg-[#232323] text-white",
           orientation === "horizontal"
-            ? " -left-5 top-1/2 -translate-y-1/2"
+          ?isSlider
+          ?"left-[1%] top-1/2 -translate-y-1/2" 
+          : "-left-5 top-1/2 -translate-y-1/2"
             : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
           className
         )}
@@ -226,8 +215,8 @@ CarouselPrevious.displayName = "CarouselPrevious"
 
 const CarouselNext = React.forwardRef<
   HTMLButtonElement,
-  React.ComponentProps<typeof Button>
->(({ className, variant = "secondary", size = "icon", ...props }, ref) => {
+  React.ComponentProps<typeof Button>  & { isSlider?: boolean }
+>(({ className, variant = "secondary", size = "icon",isSlider = false, ...props }, ref) => {
   const { orientation, scrollNext, canScrollNext } = useCarousel()
 
   return (
@@ -239,9 +228,11 @@ const CarouselNext = React.forwardRef<
         className={cn(
           "absolute bg-black shadow-md  h-10 w-10 rounded-full hover:bg-[#232323] text-white",
           orientation === "horizontal"
-            ? "-right-5 top-1/2 -translate-y-1/2"
-            : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
-          className
+          ? isSlider 
+          ? "right-[1%] top-1/2 -translate-y-1/2" // Custom style for Slider
+          : "-right-5 top-1/2 -translate-y-1/2" // Default style for others
+        : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+      className
         )}
         onClick={scrollNext}
         {...props}

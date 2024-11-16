@@ -3,7 +3,7 @@ import Bathroom from "@/components/Bathroom";
 import Deals from "@/components/Deals";
 import DiscountProducts from "@/components/DiscountProducts";
 import Gallary from "@/components/Gallary";
-import HeroSlider from "@/components/HeroSlider";
+import Slider from "@/components/Slider";
 import MagicHoliday from "@/components/MagicHoliday";
 import Speacial from "@/components/Speacial";
 import SpeacialProducts from "@/components/SpeacialProducts";
@@ -19,7 +19,8 @@ import Blog from '@/components/Blog'
 export default function Home() {
   return (
     <div>
-      <HeroSlider/>
+      {/* <HeroSlider/> */}
+      <Slider/>
       <DiscountProducts/>
       <Speacial/>
       <Gallary/>
