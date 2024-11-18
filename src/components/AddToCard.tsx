@@ -55,13 +55,13 @@ const AddToCard: React.FC<AddToCardProps> = () => {
         {cartItems.length > 0 ? (
           <div className="flex flex-col border rounded-lg p-4 mb-4 overflow-y-auto scrollbar-hide max-h-[500px]">
             {cartItems.map((item) => (
-              <div key={item.id} className="flex justify-between items-center mb-2">
+              <div key={item.id} className="flex flex-col border p-2 md:p-0 md:border-0 md:flex-row justify-between items-center mb-2">
                 {item.image ? (
                   <Image src={item.image} alt={item.name} width={100} height={100} className="h-[100px]" />
                 ) : (
                   <p className="text-sm text-gray-500">No image available</p>
                 )}
-                <p className="text-center text-lg font-medium">{item.name}</p>
+                <p className="text-center text-lg font-medium w-[270px]">{item.name}</p>
 
                 {/* Quantity Controls */}
                 <div className="flex items-center space-x-2">

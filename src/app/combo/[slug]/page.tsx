@@ -1,7 +1,7 @@
 "use client";
 import { FC, useState } from "react";
 import { use } from "react";
-import { cardData } from "@/data/bathroomData";
+import { cardData } from "@/data/setPac";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
@@ -38,11 +38,12 @@ const Page: FC<PageProps> = ({ params }) => {
 
    // Ensure itemPrice has a default value of 0 if `allInfo` is undefined
   const itemPrice = allInfo?.price ?? 0;
-  const [mainImage, setMainImage] = useState<string | null>(allInfo?.image?? null);
+  const [mainImage, setMainImage] = useState<string | null>(allInfo?.imageUrl?? null);
   const [msg, setMsg] = useState<string | null>(null);
   const { addToCart, updateCartItem ,resetItemFlag, cartItems  } = useCart();
 
-  const [count, setCount] = useState<number>(1); // Default initial value
+
+const [count, setCount] = useState<number>(1); // Default initial value
 const [totalPrice, setTotalPrice] = useState<number>(itemPrice); // Default initial value
 
 useEffect(() => {  
@@ -121,7 +122,7 @@ useEffect(() => {
         name: allInfo?.title || "Unknown Item",
         price: itemPrice,
         quantity: count,
-        image : allInfo?.image|| "/public/bath/batn.png",
+        image : allInfo?.imageUrl|| "/public/bath/batn.png",
       });
     }
    
@@ -164,8 +165,6 @@ useEffect(() => {
           <div className="max-h-[500px] overflow-y-scroll scrollbar-hide">
             <div>
                <h3 className="text-lg font-semibold capitalize">{allInfo?.title}</h3> 
-           
-
                <p className="text-sm py-1 font-normal text-gray-500">{allInfo?.des}</p>
 
 

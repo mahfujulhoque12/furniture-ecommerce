@@ -8,7 +8,7 @@ const Banner = () => {
   return (
     <section className="py-5 md:py-10">
     <MaxWidthWrapper>
-    <Link href="#" className="relative" >
+    <Link href="/shop" className="relative" >
         <Image src={banner} alt="img" width={1100} height={400} className="w-full h-[400px] object-cover"/>
         <div className="absolute top-[25%] sm:top-[20%]  left-[15%] sm:left-[25%] md:left-[15%] lg:left-[25%] xl:left-[30%]">
         <h2 className=" font-bold text-2xl  md:text-4xl text-black">Holiday Essential For Less</h2>
