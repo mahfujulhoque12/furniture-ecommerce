@@ -67,7 +67,7 @@ const Slider = () => {
                        <CarouselItem key={data.id}>
                         <div className="relative">
                             <Image src={data.image} alt={data.title} width={1200} height={700}  className="w-full h-[300px] md:h-[600px] object-cover"/>
-                            <div className="absolute top-16 left-2  sm:top-[40%]  sm:left-[20%]">
+                            <div className="absolute top-16 left-2  sm:top-[40%]  sm:left-[20%]  md:left-[8%] lg:left-[15%] xl:left-[20%]">
                                 <h1 className="text-white text-lg md:text-4xl uppercase font-bold text-center">{data.title}</h1>
                                 <h3 className="text-white font-medium text-sm md:text-lg text-center capitalize">{data.subTitle}</h3>
                                 <div className="flex justify-center items-center mt-3">
