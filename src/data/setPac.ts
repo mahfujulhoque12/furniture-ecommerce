@@ -29,7 +29,7 @@ type CardData = {
  export const cardData : CardData [] =[
     {
       id:1,
-      slug:createSlug("combo Offer for you1"),
+      slug:createSlug("combo Offer for you1 testtttttt"),
       imageUrl:combo9.src,
       title:"Speacial Combo Offer only for you",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing ...",
