@@ -30,7 +30,7 @@ export function createSlug(title: string): string {
 export const cardData : CardData [] =[
     {
         id:1,
-        slug:createSlug('North Valley Spruce'),
+        slug:createSlug('North Valley Spruce ggggg'),
         image:bath8.src,
         title:"upto 35% discount",
         name:"North Valley Spruce",
