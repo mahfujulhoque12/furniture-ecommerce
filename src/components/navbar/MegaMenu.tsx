@@ -31,40 +31,32 @@ const menuData: MenuDataItem[] = [
       {
         heading: "Interiors",
         submenu: [
-          { label: "Excepturi corporis atque libero", href: "#" },
+          { label: "House Chair", href: "#" },
           {
-            label: "Ratione recusandae incidunt atque libero",
-            href: "#",
+            label: "House Table",
+            href: "/house-furniture",
           },
-          {
-            label: "Excepturi corporis atque libero",
-            href: "#",
-          },
+        
         ],
       },
       {
         heading: "Interiors",
         submenu: [
           {
-            label: "Exercitationem corporis a voluptas at atque libero",
-            href: "#",
+            label: "House Cabinet",
+            href: "/house-furniture",
           },
-          { label: "Provident, odio obcaecati", href: "#" },
-          {
-            label: "Porro impedit corporis atque libero dolor impedit corporis",
-            href: "#",
-          },
+          { label: "House Sofa", href: "#" },
         ],
       },
       {
         heading: "Interiors",
         submenu: [
-          { label: "Corporis consequatur consectetur", href: "#" },
+          { label: "House Waredrobe", href: "#" },
           {
-            label: "Accusamus vero beatae dolor impedit corporis",
-            href: "#",
+            label: "House Corner Shelf",
+            href: "/house-furniture",
           },
-          { label: "Ab corrupti deserunt laborum", href: "#" },
         ],
       },
     ],
@@ -76,37 +68,31 @@ const menuData: MenuDataItem[] = [
       {
         heading: "Design Ideas",
         submenu: [
-          { label: "Lorem ipsum dolor sit consectetur", href: "#" },
+          { label: "Office Chair", href: "/office-furniture" },
           {
-            label: "Ratione recusandae incidunt dolor impedit corporis",
-            href: "#",
+            label: "Office Sofa",
+            href: "/office-furniture",
           },
-          { label: "Accusamus vero beatae dolor", href: "#" },
+         
         ],
       },
       {
         heading: "Design Ideas",
         submenu: [
-          { label: "Excepturi sapiente sequi", href: "#" },
+          { label: "Office File Cabinet", href: "/office-furniture" },
           {
-            label: "Ratione recusandae dolor impedit corporis",
-            href: "#",
+            label: "Office Work Station",
+            href: "/office-furniture",
           },
-          { label: "Dolor sit consectetur dolor impedit", href: "#" },
-          { label: "Repellat corporis excepturi", href: "#" },
-          { label: "Corporis consequatur", href: "#" },
+ 
         ],
       },
       {
         heading: "Design Ideas",
         submenu: [
-          { label: "Lorem ipsum dolor sit consectetur", href: "#" },
-          { label: "Repellat corporis excepturi?", href: "#" },
-          {
-            label: "Dolor sit consectetur dolor impedit corporis",
-            href: "#",
-          },
-          { label: "Ratione recusandae", href: "#" },
+          { label: "Office Table", href: "/office-furniture" },
+          { label: "Office Book Shelf", href: "/office-furniture" },
+
         ],
       },
     ],
