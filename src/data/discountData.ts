@@ -35,7 +35,7 @@ type CardData = {
       
  export const cardData : CardData [] =[
     {
-      id:1,
+      id:201,
       category:"featured",
       slug:createSlug("Speacial Offer for you1"),
       imageUrl:furniture1.src,
@@ -47,7 +47,7 @@ type CardData = {
       moreImg:[furniture2.src,furniture3.src,furniture4.src,furniture5.src,],
     },
     {
-      id:2,
+      id:202,
       category:"featured",
      slug: createSlug("Speacial Offer for you2"),
       imageUrl:furniture3.src,
@@ -60,7 +60,7 @@ type CardData = {
 
     },
     {
-      id:3,
+      id:203,
       category:"featured",
      slug: createSlug("Speacial Offer for you3"),
      imageUrl:furniture5.src,
@@ -73,7 +73,7 @@ type CardData = {
 
     },
     {
-      id:4,
+      id:204,
       category:"featured",
      slug: createSlug("Speacial Offer for you4"),
      imageUrl:furniture7.src,
@@ -86,7 +86,7 @@ type CardData = {
 
     },
     {
-      id:5,
+      id:205,
       category:"featured",
      slug: createSlug("Speacial Offer for you5"),
      imageUrl:furniture9.src,
@@ -99,7 +99,7 @@ type CardData = {
 
     },
     {
-      id:6,
+      id:206,
       category:"featured",
      slug: createSlug("Speacial Offer for you6"),
      imageUrl:furniture11.src,
@@ -112,7 +112,7 @@ type CardData = {
 
     },
     {
-      id:7,
+      id:207,
       category:"featured",
      slug: createSlug("Speacial Offer for you7"),
      imageUrl:furniture12.src,
@@ -125,7 +125,7 @@ type CardData = {
 
     },
     {
-      id:8,
+      id:208,
      category:"latest" ,   
     slug: createSlug("Speacial Offer for you8"),
     imageUrl:furniture11.src,
@@ -138,7 +138,7 @@ type CardData = {
 
     },
     {
-      id:9,
+      id:209,
     category:"latest" , 
     slug: createSlug("Speacial Offer for you9"),
     imageUrl:furniture13.src,
@@ -151,7 +151,7 @@ type CardData = {
 
     },
     {
-      id:10,
+      id:300,
       category:"latest",
      slug: createSlug("Speacial Offer for you10"),
      imageUrl:furniture5.src,
@@ -164,7 +164,7 @@ type CardData = {
 
     },
     {
-      id:11,
+      id:301,
       category:"latest",
      slug: createSlug("Speacial Offer for you11"),
      imageUrl:furniture3.src,
@@ -177,7 +177,7 @@ type CardData = {
 
     },
     {
-      id:12,
+      id:302,
       category:"latest",
      slug: createSlug("Speacial Offer for you12"),
      imageUrl:furniture9.src,
@@ -189,7 +189,7 @@ type CardData = {
       moreImg:[furniture2.src,furniture3.src,furniture4.src,furniture5.src,],
     },
     {
-      id:13,
+      id:303,
       category:"latest",
      slug: createSlug("Speacial Offer for you13"),
      imageUrl:furniture3.src,
@@ -201,7 +201,7 @@ type CardData = {
       moreImg:[furniture2.src,furniture3.src,furniture4.src,furniture5.src,],
     },
     {
-      id:14,
+      id:304,
       category:"bestseller",
      slug: createSlug("Speacial Offer for you14"),
      imageUrl:furniture8.src,
@@ -213,7 +213,7 @@ type CardData = {
       moreImg:[furniture2.src,furniture3.src,furniture4.src,furniture5.src,],
     },
     {
-      id:15,
+      id:305,
       category:"bestseller",
      slug: createSlug("Speacial Offer for you15"),
      imageUrl:furniture9.src,
@@ -224,7 +224,7 @@ type CardData = {
       oldPrice:"$300",
       moreImg:[furniture2.src,furniture3.src,furniture4.src,furniture5.src,],
     },{
-      id:16,
+      id:306,
       category:"bestseller",
      slug: createSlug("Speacial Offer for you16"),
      imageUrl:furniture14.src,
@@ -236,7 +236,7 @@ type CardData = {
       moreImg:[furniture2.src,furniture3.src,furniture4.src,furniture5.src,],
 
     },{
-      id:17,
+      id:307,
       category:"bestseller",
      slug: createSlug("Speacial Offer for you17"),
      imageUrl:furniture2.src,
@@ -248,7 +248,7 @@ type CardData = {
       moreImg:[furniture2.src,furniture3.src,furniture4.src,furniture5.src,],
 
     },{
-      id:18,
+      id:308,
       category:"bestseller",
      slug: createSlug("Speacial Offer for you18"),
      imageUrl:furniture1.src,
@@ -260,7 +260,7 @@ type CardData = {
       moreImg:[furniture2.src,furniture3.src,furniture4.src,furniture5.src,],
 
     },{
-      id:19,
+      id:309,
       category:"bestseller",
      slug: createSlug("Speacial Offer for you19"),
      imageUrl:furniture8.src,

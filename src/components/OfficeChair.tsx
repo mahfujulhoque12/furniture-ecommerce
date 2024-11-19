@@ -18,7 +18,7 @@ const OfficeChair = () =>{
     const handleDetails = (slug:string) =>{
       router.push(`office-furniture/${slug}`)
     }
-    const chairData = cardData.filter((card)=> card.id >=1 && card.id <= 10)
+    const chairData = cardData.filter((card)=> card.id >=501 && card.id <= 510)
     return(
         <section className="py-5 md:py-10">
             <MaxWidthWrapper>

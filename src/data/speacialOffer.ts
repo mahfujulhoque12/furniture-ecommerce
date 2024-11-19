@@ -33,7 +33,7 @@ export function createSlug(title: string): string {
 
 export const cardData : CardData [] =[
     {
-        id:1,
+        id:321,
         slug:createSlug('North Valley Spruce'),
         image:speacial.src,
         title:"upto 70% discount",
@@ -44,7 +44,7 @@ export const cardData : CardData [] =[
         moreImg:[speacial.src,speacial8.src,speacial4.src,speacial6.src,],
     },
     {
-        id:2,
+        id:322,
         slug:createSlug('North Valley Spruce2'),
         image:speacial1.src,
         title:"upto 70% discount",
@@ -54,7 +54,7 @@ export const cardData : CardData [] =[
         oldPrice:"$280",
         moreImg:[speacial.src,speacial8.src,speacial4.src,speacial6.src,], 
     },  {
-        id:3,
+        id:323,
         slug:createSlug('North Valley Spruce3'),
         image:speacial2.src,
         title:"upto 70% discount",
@@ -65,7 +65,7 @@ export const cardData : CardData [] =[
         moreImg:[speacial.src,speacial8.src,speacial4.src,speacial6.src,],
     }, 
      {
-        id:4,
+        id:324,
         slug:createSlug('North Valley Spruce4'),
         image:speacial3.src,
         title:"upto 70% discount",
@@ -76,7 +76,7 @@ export const cardData : CardData [] =[
             moreImg:[speacial.src,speacial8.src,speacial4.src,speacial6.src,],
     }, 
      {
-        id:5,
+        id:325,
         slug:createSlug('North Valley Spruce5'),
         image:speacial4.src,
         title:"upto 70% discount",
@@ -87,7 +87,7 @@ export const cardData : CardData [] =[
             moreImg:[speacial.src,speacial8.src,speacial4.src,speacial6.src,],
     },  
     {
-        id:6,
+        id:326,
         slug:createSlug('North Valley Spruce 6'),
         image:speacial5.src,
         title:"upto 70% discount",
@@ -98,7 +98,7 @@ export const cardData : CardData [] =[
             moreImg:[speacial.src,speacial8.src,speacial4.src,speacial6.src,],
     },  
     {
-        id:7,
+        id:327,
         slug:createSlug('North Valley Spruce 7'),
         image:speacial6.src,
         title:"upto 70% discount",
@@ -109,7 +109,7 @@ export const cardData : CardData [] =[
             moreImg:[speacial.src,speacial8.src,speacial4.src,speacial6.src,],
     },  
     {
-        id:8,
+        id:328,
         slug:createSlug('North Valley Spruce 8'),
         image:speacial7.src,
         title:"upto 70% discount",
@@ -120,7 +120,7 @@ export const cardData : CardData [] =[
             moreImg:[speacial.src,speacial8.src,speacial4.src,speacial6.src,],
     },
       {
-        id:9,
+        id:329,
         slug:createSlug('North Valley Spruce 9'),
         image:speacial8.src,
         title:"upto 70% discount",
@@ -131,7 +131,7 @@ export const cardData : CardData [] =[
             moreImg:[speacial.src,speacial8.src,speacial4.src,speacial6.src,],
     },  
     {
-        id:10,
+        id:330,
         slug:createSlug('North Valley Spruce10'),
         image:speacial9.src,
         des:"Lorem Ipsum is simply dummy  of the printing and typesetting ...",
