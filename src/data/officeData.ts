@@ -77,7 +77,7 @@ export function createSlug(title: string): string {
 
     // office chair
     {
-        id:1,
+        id:501,
         slug:createSlug('Speacial office Chair'),
         image:chair1.src,
         title:"upto 70% discount",
@@ -88,7 +88,7 @@ export function createSlug(title: string): string {
         moreImg:[chair1.src,chair7.src,chair4.src,chair6.src,],
     },
     {
-        id:2,
+        id:502,
         slug:createSlug('Simple office Chair'),
         image:chair7.src,
         title:"upto 70% discount",
@@ -99,7 +99,7 @@ export function createSlug(title: string): string {
            moreImg:[chair1.src,chair7.src,chair4.src,chair6.src,], 
     },  
     {
-        id:3,
+        id:503,
         slug:createSlug('Normal office Chair'),
         image:chair2.src,
         title:"upto 70% discount",
@@ -110,7 +110,7 @@ export function createSlug(title: string): string {
             moreImg:[chair1.src,chair7.src,chair4.src,chair6.src,],
     }, 
      {
-        id:4,
+        id:504,
         slug:createSlug('Comfort office Chair'),
         image:chair3.src,
         title:"upto 70% discount",
@@ -121,7 +121,7 @@ export function createSlug(title: string): string {
             moreImg:[chair1.src,chair7.src,chair4.src,chair6.src,],
     }, 
      {
-        id:5,
+        id:505,
         slug:createSlug('Comfort office Chair two'),
         image:chair4.src,
         title:"upto 70% discount",
@@ -132,7 +132,7 @@ export function createSlug(title: string): string {
             moreImg:[chair1.src,chair7.src,chair4.src,chair6.src,],
     },  
     {
-        id:6,
+        id:506,
         slug:createSlug('Comfort office Chair three'),
         image:chair5.src,
         title:"upto 70% discount",
@@ -143,7 +143,7 @@ export function createSlug(title: string): string {
             moreImg:[chair1.src,chair7.src,chair4.src,chair6.src,],
     },  
     {
-        id:7,
+        id:507,
         slug:createSlug('Comfort office Chair 4'),
         image:chair6.src,
         title:"upto 70% discount",
@@ -154,7 +154,7 @@ export function createSlug(title: string): string {
             moreImg:[chair3.src,chair7.src,chair4.src,chair6.src,],
     },  
     {
-        id:8,
+        id:508,
         slug:createSlug('Comfort office Chair 8'),
         image:chair7.src,
         title:"upto 70% discount",
@@ -165,7 +165,7 @@ export function createSlug(title: string): string {
             moreImg:[chair5.src,chair7.src,chair4.src,chair6.src,],
     },
       {
-        id:9,
+        id:509,
         slug:createSlug('Comfort office Chair 9'),
         image:chair7.src,
         title:"upto 70% discount",
@@ -176,7 +176,7 @@ export function createSlug(title: string): string {
             moreImg:[chair1.src,chair7.src,chair4.src,chair6.src,],
     },  
     {
-        id:10,
+        id:510,
         slug:createSlug('Comfort office Chair10'),
         image:chair4.src,
         des:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has..",
@@ -189,7 +189,7 @@ export function createSlug(title: string): string {
 
     // office sofa
     {
-        id:11,
+        id:511,
         slug:createSlug('Speacial office sofa'),
         image:sofa1.src,
         title:"upto 70% discount",
@@ -200,7 +200,7 @@ export function createSlug(title: string): string {
         moreImg:[sofa1.src,sofa7.src,sofa4.src,sofa6.src,],
     },
     {
-        id:12,
+        id:512,
         slug:createSlug('Simple office sofa'),
         image:sofa7.src,
         title:"upto 70% discount",
@@ -211,7 +211,7 @@ export function createSlug(title: string): string {
            moreImg:[sofa1.src,sofa7.src,sofa4.src,sofa6.src,], 
     },  
     {
-        id:13,
+        id:513,
         slug:createSlug('Normal office sofa'),
         image:sofa2.src,
         title:"upto 70% discount",
@@ -222,7 +222,7 @@ export function createSlug(title: string): string {
             moreImg:[sofa1.src,sofa7.src,sofa4.src,sofa6.src,],
     }, 
      {
-        id:14,
+        id:514,
         slug:createSlug('Comfort office sofa'),
         image:sofa3.src,
         title:"upto 70% discount",
@@ -233,7 +233,7 @@ export function createSlug(title: string): string {
             moreImg:[sofa1.src,sofa7.src,sofa4.src,sofa6.src,],
     }, 
      {
-        id:15,
+        id:515,
         slug:createSlug('Comfort office sofa two'),
         image:sofa4.src,
         title:"upto 70% discount",
@@ -244,7 +244,7 @@ export function createSlug(title: string): string {
             moreImg:[sofa1.src,sofa7.src,sofa4.src,sofa6.src,],
     },  
     {
-        id:16,
+        id:516,
         slug:createSlug('Comfort office sofa three'),
         image:sofa5.src,
         title:"upto 70% discount",
@@ -255,7 +255,7 @@ export function createSlug(title: string): string {
             moreImg:[sofa1.src,sofa7.src,sofa4.src,sofa6.src,],
     },  
     {
-        id:17,
+        id:517,
         slug:createSlug('Comfort office sofa 4'),
         image:sofa6.src,
         title:"upto 70% discount",
@@ -266,7 +266,7 @@ export function createSlug(title: string): string {
             moreImg:[sofa3.src,sofa7.src,sofa4.src,sofa6.src,],
     },  
     {
-        id:18,
+        id:518,
         slug:createSlug('Comfort office sofa 8'),
         image:sofa7.src,
         title:"upto 70% discount",
@@ -277,7 +277,7 @@ export function createSlug(title: string): string {
             moreImg:[sofa5.src,sofa7.src,sofa4.src,sofa6.src,],
     },
       {
-        id:19,
+        id:519,
         slug:createSlug('Comfort office sofa 9'),
         image:sofa7.src,
         title:"upto 70% discount",
@@ -288,7 +288,7 @@ export function createSlug(title: string): string {
             moreImg:[sofa1.src,sofa7.src,sofa4.src,sofa6.src,],
     },  
     {
-        id:20,
+        id:520,
         slug:createSlug('Comfort office sofa10'),
         image:sofa4.src,
         des:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has..",
@@ -301,7 +301,7 @@ export function createSlug(title: string): string {
 
      // office file cabinet
      {
-        id:21,
+        id:521,
         slug:createSlug('Speacial office cabinet'),
         image:cabinet1.src,
         title:"upto 70% discount",
@@ -312,7 +312,7 @@ export function createSlug(title: string): string {
         moreImg:[cabinet1.src,cabinet7.src,cabinet4.src,cabinet6.src,],
     },
     {
-        id:22,
+        id:522,
         slug:createSlug('Simple office cabinet'),
         image:cabinet7.src,
         title:"upto 70% discount",
@@ -323,7 +323,7 @@ export function createSlug(title: string): string {
            moreImg:[cabinet1.src,cabinet7.src,cabinet4.src,cabinet6.src,], 
     },  
     {
-        id:23,
+        id:523,
         slug:createSlug('Normal office cabinet'),
         image:cabinet2.src,
         title:"upto 70% discount",
@@ -334,7 +334,7 @@ export function createSlug(title: string): string {
             moreImg:[cabinet1.src,cabinet7.src,cabinet4.src,cabinet6.src,],
     }, 
      {
-        id:24,
+        id:524,
         slug:createSlug('Comfort office cabinet'),
         image:cabinet3.src,
         title:"upto 70% discount",
@@ -345,7 +345,7 @@ export function createSlug(title: string): string {
             moreImg:[cabinet1.src,cabinet7.src,cabinet4.src,cabinet6.src,],
     }, 
      {
-        id:25,
+        id:525,
         slug:createSlug('Comfort office cabinet two'),
         image:cabinet4.src,
         title:"upto 70% discount",
@@ -356,7 +356,7 @@ export function createSlug(title: string): string {
             moreImg:[cabinet1.src,cabinet7.src,cabinet4.src,cabinet6.src,],
     },  
     {
-        id:26,
+        id:526,
         slug:createSlug('Comfort office cabinet three'),
         image:cabinet5.src,
         title:"upto 70% discount",
@@ -367,7 +367,7 @@ export function createSlug(title: string): string {
             moreImg:[cabinet1.src,cabinet7.src,cabinet4.src,cabinet6.src,],
     },  
     {
-        id:27,
+        id:527,
         slug:createSlug('Comfort office cabinet 4'),
         image:cabinet6.src,
         title:"upto 70% discount",
@@ -378,7 +378,7 @@ export function createSlug(title: string): string {
             moreImg:[cabinet3.src,cabinet7.src,cabinet4.src,cabinet6.src,],
     },  
     {
-        id:28,
+        id:528,
         slug:createSlug('Comfort office cabinet 8'),
         image:cabinet7.src,
         title:"upto 70% discount",
@@ -389,7 +389,7 @@ export function createSlug(title: string): string {
             moreImg:[cabinet5.src,cabinet7.src,cabinet4.src,cabinet6.src,],
     },
       {
-        id:29,
+        id:529,
         slug:createSlug('Comfort office cabinet 9'),
         image:cabinet7.src,
         title:"upto 70% discount",
@@ -400,7 +400,7 @@ export function createSlug(title: string): string {
             moreImg:[cabinet1.src,cabinet7.src,cabinet4.src,cabinet6.src,],
     },  
     {
-        id:30,
+        id:530,
         slug:createSlug('Comfort office cabinet10'),
         image:cabinet4.src,
         des:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has..",
@@ -413,7 +413,7 @@ export function createSlug(title: string): string {
 
     // office work station
      {
-        id:31,
+        id:531,
         slug:createSlug('Speacial office work'),
         image:work1.src,
         title:"upto 70% discount",
@@ -424,7 +424,7 @@ export function createSlug(title: string): string {
         moreImg:[work1.src,work7.src,work4.src,work6.src,],
     },
     {
-        id:32,
+        id:532,
         slug:createSlug('Simple office work'),
         image:work7.src,
         title:"upto 70% discount",
@@ -435,7 +435,7 @@ export function createSlug(title: string): string {
            moreImg:[work1.src,work7.src,work4.src,work6.src,], 
     },  
     {
-        id:33,
+        id:533,
         slug:createSlug('Normal office work'),
         image:work2.src,
         title:"upto 70% discount",
@@ -446,7 +446,7 @@ export function createSlug(title: string): string {
             moreImg:[work1.src,work7.src,work4.src,work6.src,],
     }, 
      {
-        id:34,
+        id:534,
         slug:createSlug('Comfort office work'),
         image:work3.src,
         title:"upto 70% discount",
@@ -457,7 +457,7 @@ export function createSlug(title: string): string {
             moreImg:[work1.src,work7.src,work4.src,work6.src,],
     }, 
      {
-        id:35,
+        id:535,
         slug:createSlug('Comfort office work two'),
         image:work4.src,
         title:"upto 70% discount",
@@ -468,7 +468,7 @@ export function createSlug(title: string): string {
             moreImg:[work1.src,work7.src,work4.src,work6.src,],
     },  
     {
-        id:36,
+        id:536,
         slug:createSlug('Comfort office work three'),
         image:work5.src,
         title:"upto 70% discount",
@@ -479,7 +479,7 @@ export function createSlug(title: string): string {
             moreImg:[work1.src,work7.src,work4.src,work6.src,],
     },  
     {
-        id:37,
+        id:537,
         slug:createSlug('Comfort office work 4'),
         image:work6.src,
         title:"upto 70% discount",
@@ -490,7 +490,7 @@ export function createSlug(title: string): string {
             moreImg:[work3.src,work7.src,work4.src,work6.src,],
     },  
     {
-        id:38,
+        id:538,
         slug:createSlug('Comfort office work 8'),
         image:work7.src,
         title:"upto 70% discount",
@@ -501,7 +501,7 @@ export function createSlug(title: string): string {
             moreImg:[work5.src,work7.src,work4.src,work6.src,],
     },
       {
-        id:39,
+        id:539,
         slug:createSlug('Comfort office work 9'),
         image:work7.src,
         title:"upto 70% discount",
@@ -512,7 +512,7 @@ export function createSlug(title: string): string {
             moreImg:[work1.src,work7.src,work4.src,work6.src,],
     },  
     {
-        id:40,
+        id:540,
         slug:createSlug('Comfort office work10'),
         image:work4.src,
         des:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has..",
@@ -525,7 +525,7 @@ export function createSlug(title: string): string {
     // office table
 
     {
-        id:41,
+        id:541,
         slug:createSlug('Speacial office table'),
         image:table1.src,
         title:"upto 70% discount",
@@ -536,7 +536,7 @@ export function createSlug(title: string): string {
         moreImg:[table1.src,table7.src,table4.src,table6.src,],
     },
     {
-        id:42,
+        id:542,
         slug:createSlug('Simple office table'),
         image:table7.src,
         title:"upto 70% discount",
@@ -547,7 +547,7 @@ export function createSlug(title: string): string {
            moreImg:[table1.src,table7.src,table4.src,table6.src,], 
     },  
     {
-        id:43,
+        id:543,
         slug:createSlug('Normal office table'),
         image:table2.src,
         title:"upto 70% discount",
@@ -558,7 +558,7 @@ export function createSlug(title: string): string {
             moreImg:[table1.src,table7.src,table4.src,table6.src,],
     }, 
      {
-        id:44,
+        id:544,
         slug:createSlug('Comfort office table'),
         image:table3.src,
         title:"upto 70% discount",
@@ -569,7 +569,7 @@ export function createSlug(title: string): string {
             moreImg:[table1.src,table7.src,table4.src,table6.src,],
     }, 
      {
-        id:45,
+        id:545,
         slug:createSlug('Comfort office table two'),
         image:table4.src,
         title:"upto 70% discount",
@@ -580,7 +580,7 @@ export function createSlug(title: string): string {
             moreImg:[table1.src,table7.src,table4.src,table6.src,],
     },  
     {
-        id:46,
+        id:546,
         slug:createSlug('Comfort office table three'),
         image:table5.src,
         title:"upto 70% discount",
@@ -591,7 +591,7 @@ export function createSlug(title: string): string {
             moreImg:[table1.src,table7.src,table4.src,table6.src,],
     },  
     {
-        id:47,
+        id:547,
         slug:createSlug('Comfort office table 4'),
         image:table6.src,
         title:"upto 70% discount",
@@ -602,7 +602,7 @@ export function createSlug(title: string): string {
             moreImg:[table3.src,table7.src,table4.src,table6.src,],
     },  
     {
-        id:48,
+        id:548,
         slug:createSlug('Comfort office table 8'),
         image:table7.src,
         title:"upto 70% discount",
@@ -613,7 +613,7 @@ export function createSlug(title: string): string {
             moreImg:[table5.src,table7.src,table4.src,table6.src,],
     },
       {
-        id:49,
+        id:549,
         slug:createSlug('Comfort office table 9'),
         image:table7.src,
         title:"upto 70% discount",
@@ -624,7 +624,7 @@ export function createSlug(title: string): string {
             moreImg:[table1.src,table7.src,table4.src,table6.src,],
     },  
     {
-        id:50,
+        id:550,
         slug:createSlug('Comfort office table10'),
         image:table4.src,
         des:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has..",
@@ -637,7 +637,7 @@ export function createSlug(title: string): string {
 
 //office book shelf
 {
-    id:51,
+    id:551,
     slug:createSlug('Speacial office bookshelf'),
     image:bookshelf1.src,
     title:"upto 70% discount",
@@ -648,7 +648,7 @@ export function createSlug(title: string): string {
     moreImg:[bookshelf1.src,bookshelf7.src,bookshelf4.src,bookshelf6.src,],
 },
 {
-    id:52,
+    id:552,
     slug:createSlug('Simple office bookshelf'),
     image:bookshelf7.src,
     title:"upto 70% discount",
@@ -659,7 +659,7 @@ export function createSlug(title: string): string {
        moreImg:[bookshelf1.src,bookshelf7.src,bookshelf4.src,bookshelf6.src,], 
 },  
 {
-    id:53,
+    id:553,
     slug:createSlug('Normal office bookshelf'),
     image:bookshelf2.src,
     title:"upto 70% discount",
@@ -670,7 +670,7 @@ export function createSlug(title: string): string {
         moreImg:[bookshelf1.src,bookshelf7.src,bookshelf4.src,bookshelf6.src,],
 }, 
  {
-    id:54,
+    id:554,
     slug:createSlug('Comfort office bookshelf'),
     image:bookshelf3.src,
     title:"upto 70% discount",
@@ -681,7 +681,7 @@ export function createSlug(title: string): string {
         moreImg:[bookshelf1.src,bookshelf7.src,bookshelf4.src,bookshelf6.src,],
 }, 
  {
-    id:55,
+    id:555,
     slug:createSlug('Comfort office bookshelf two'),
     image:bookshelf4.src,
     title:"upto 70% discount",
@@ -692,7 +692,7 @@ export function createSlug(title: string): string {
         moreImg:[bookshelf1.src,bookshelf7.src,bookshelf4.src,bookshelf6.src,],
 },  
 {
-    id:56,
+    id:556,
     slug:createSlug('Comfort office bookshelf three'),
     image:bookshelf5.src,
     title:"upto 70% discount",
@@ -703,7 +703,7 @@ export function createSlug(title: string): string {
         moreImg:[bookshelf1.src,bookshelf7.src,bookshelf4.src,bookshelf6.src,],
 },  
 {
-    id:57,
+    id:557,
     slug:createSlug('Comfort office bookshelf 4'),
     image:bookshelf6.src,
     title:"upto 70% discount",
@@ -714,7 +714,7 @@ export function createSlug(title: string): string {
         moreImg:[bookshelf3.src,bookshelf7.src,bookshelf4.src,bookshelf6.src,],
 },  
 {
-    id:58,
+    id:558,
     slug:createSlug('Comfort office bookshelf 8'),
     image:bookshelf7.src,
     title:"upto 70% discount",
@@ -725,7 +725,7 @@ export function createSlug(title: string): string {
         moreImg:[bookshelf5.src,bookshelf7.src,bookshelf4.src,bookshelf6.src,],
 },
   {
-    id:59,
+    id:559,
     slug:createSlug('Comfort office bookshelf 9'),
     image:bookshelf7.src,
     title:"upto 70% discount",
@@ -736,7 +736,7 @@ export function createSlug(title: string): string {
         moreImg:[bookshelf1.src,bookshelf7.src,bookshelf4.src,bookshelf6.src,],
 },  
 {
-    id:60,
+    id:560,
     slug:createSlug('Comfort office bookshelf10'),
     image:bookshelf4.src,
     des:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has..",

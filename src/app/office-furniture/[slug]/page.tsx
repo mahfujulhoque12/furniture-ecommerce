@@ -42,12 +42,18 @@ const Page: FC<PageProps> = ({ params }) => {
   const [msg, setMsg] = useState<string | null>(null);
   const { addToCart, updateCartItem ,resetItemFlag, cartItems  } = useCart();
 
-  // Load initial count and price from localStorage
-  const initialCount = JSON.parse(localStorage.getItem("count") || "1");
-  const initialTotalPrice = JSON.parse(localStorage.getItem("totalPrice") || itemPrice.toString());
-
-  const [count, setCount] = useState<number>(initialCount);
-  const [totalPrice, setTotalPrice] = useState<number>(initialTotalPrice);
+  const [count, setCount] = useState<number>(1); // Default initial value
+  const [totalPrice, setTotalPrice] = useState<number>(itemPrice); // Default initial value
+  
+  useEffect(() => {  
+   // Load initial count and price from localStorage
+      const savedCount = JSON.parse(localStorage.getItem("count") || "1");
+      const savedTotalPrice = JSON.parse(localStorage.getItem("totalPrice") || itemPrice.toString());
+  
+      setCount(savedCount);
+      setTotalPrice(savedTotalPrice);
+    }, [itemPrice]);
+  
 
 
     // Check if item is already in the cart

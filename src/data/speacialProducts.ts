@@ -34,18 +34,18 @@ type CardData = {
 
  export const cardData : CardData [] =[
     {
-      id:1,
+      id:331,
       slug:createSlug("Speacial Offer for you1"),
       imageUrl:furniture14.src,
       hoverImg:furniture13.src,
-      title:"Speacial Offer for you",
+      title:"Speacial Offer for you bad",
       des:"Lorem ipsum dolor sit amet consectetur adipisicing ...",
       price:260,
       discount:"-20%",
       moreImg:[furniture13.src,furniture11.src,furniture10.src,furniture8.src],
     },
     {
-      id:2,
+      id:332,
      slug: createSlug("Speacial Offer for you2"),
       imageUrl:furniture1.src,
       hoverImg:furniture2.src,
@@ -56,7 +56,7 @@ type CardData = {
       moreImg:[furniture13.src,furniture11.src,furniture10.src,furniture8.src],
     },
     {
-      id:3,
+      id:333,
      slug: createSlug("Speacial Offer for you3"),
      imageUrl:furniture8.src,
      hoverImg:furniture14.src,
@@ -67,7 +67,7 @@ type CardData = {
       moreImg:[furniture13.src,furniture11.src,furniture10.src,furniture8.src],
     },
     {
-      id:4,
+      id:334,
      slug: createSlug("Speacial Offer for you4"),
      imageUrl:furniture8.src,
      hoverImg:furniture7.src,
@@ -78,7 +78,7 @@ type CardData = {
       moreImg:[furniture13.src,furniture11.src,furniture10.src,furniture8.src],
     },
     {
-      id:5,
+      id:335,
      slug: createSlug("Speacial Offer for you5"),
      imageUrl:furniture1.src,
      hoverImg:furniture2.src,
@@ -89,7 +89,7 @@ type CardData = {
       moreImg:[furniture13.src,furniture11.src,furniture10.src,furniture8.src],
     },
     {
-      id:6,
+      id:336,
      slug: createSlug("Speacial Offer for you6"),
      imageUrl:furniture11.src,
      hoverImg:furniture12.src,
@@ -100,7 +100,7 @@ type CardData = {
       moreImg:[furniture13.src,furniture11.src,furniture10.src,furniture8.src],
     },
     {
-      id:7,
+      id:337,
      slug: createSlug("Speacial Offer for you7"),
      imageUrl:furniture12.src,
      hoverImg:furniture14.src,
@@ -111,7 +111,7 @@ type CardData = {
       moreImg:[furniture13.src,furniture11.src,furniture10.src,furniture8.src],
     },
     {
-      id:8,  
+      id:338,  
     slug: createSlug("Speacial Offer for you8"),
     imageUrl:furniture11.src,
     hoverImg:furniture12.src,
@@ -122,7 +122,7 @@ type CardData = {
       moreImg:[furniture13.src,furniture11.src,furniture10.src,furniture8.src],
     },
     {
-      id:9,
+      id:339,
     slug: createSlug("Speacial Offer for you9"),
     imageUrl:furniture13.src,
     hoverImg:furniture14.src,
@@ -133,7 +133,7 @@ type CardData = {
       moreImg:[furniture13.src,furniture11.src,furniture10.src,furniture8.src],
     },
     {
-      id:10,    slug: createSlug("Speacial Offer for you10"),
+      id:340,    slug: createSlug("Speacial Offer for you10"),
      imageUrl:furniture5.src,
      hoverImg:furniture6.src,
       title:"Speacial Offer for you",
@@ -143,7 +143,7 @@ type CardData = {
       moreImg:[furniture13.src,furniture11.src,furniture10.src,furniture8.src],
     },
     {
-      id:11,    slug: createSlug("Speacial Offer for you11"),
+      id:341,    slug: createSlug("Speacial Offer for you11"),
      imageUrl:furniture3.src,
       hoverImg:furniture4.src,
       title:"Speacial Offer for you",
@@ -153,7 +153,7 @@ type CardData = {
       moreImg:[furniture13.src,furniture11.src,furniture10.src,furniture8.src],
     },
     {
-      id:12,    slug: createSlug("Speacial Offer for you12"),
+      id:342,    slug: createSlug("Speacial Offer for you12"),
      imageUrl:furniture9.src,
      hoverImg:furniture4.src,
       title:"Speacial Offer for you",
@@ -163,7 +163,7 @@ type CardData = {
       moreImg:[furniture13.src,furniture11.src,furniture10.src,furniture8.src],
     },
     {
-      id:13,    slug: createSlug("Speacial Offer for you13"),
+      id:343,    slug: createSlug("Speacial Offer for you13"),
      imageUrl:furniture3.src,
       hoverImg:furniture4.src,
       title:"Speacial Offer for you",
@@ -173,7 +173,7 @@ type CardData = {
       moreImg:[furniture13.src,furniture11.src,furniture10.src,furniture8.src],
     },
     {
-      id:14,
+      id:344,
      slug: createSlug("Speacial Offer for you14"),
      imageUrl:furniture8.src,
      hoverImg:furniture1.src,
@@ -184,7 +184,7 @@ type CardData = {
       moreImg:[furniture13.src,furniture11.src,furniture10.src,furniture8.src],
     },
     {
-      id:15,
+      id:345,
      slug: createSlug("Speacial Offer for you15"),
      imageUrl:furniture9.src,
      hoverImg:furniture12.src,
@@ -194,7 +194,7 @@ type CardData = {
       discount:"-20%",
       moreImg:[furniture13.src,furniture11.src,furniture10.src,furniture8.src],
     },{
-      id:16,
+      id:346,
      slug: createSlug("Speacial Offer for you16"),
      imageUrl:furniture14.src,
      hoverImg:furniture4.src,
@@ -204,7 +204,7 @@ type CardData = {
       discount:"-20%",
       moreImg:[furniture13.src,furniture11.src,furniture10.src,furniture8.src],
     },{
-      id:17,
+      id:347,
      slug: createSlug("Speacial Offer for you17"),
      imageUrl:furniture2.src,
      hoverImg:furniture7.src,
@@ -214,7 +214,7 @@ type CardData = {
       discount:"-20%",
       moreImg:[furniture13.src,furniture11.src,furniture10.src,furniture8.src],
     },{
-      id:18,
+      id:348,
      slug: createSlug("Speacial Offer for you18"),
      imageUrl:furniture1.src,
      hoverImg:furniture4.src,
@@ -224,7 +224,7 @@ type CardData = {
       discount:"-20%",
       moreImg:[furniture13.src,furniture11.src,furniture10.src,furniture8.src],
     },{
-      id:19,
+      id:349,
      slug: createSlug("Speacial Offer for you19"),
      imageUrl:furniture8.src,
      hoverImg:furniture1.src,

@@ -77,7 +77,7 @@ export const cardData : CardData [] =[
 
     // house chair
     {
-        id:1,
+        id:601,
         slug:createSlug('Speacial House Chair'),
         image:chair1.src,
         title:"upto 70% discount",
@@ -88,7 +88,7 @@ export const cardData : CardData [] =[
         moreImg:[chair1.src,chair7.src,chair4.src,chair6.src,],
     },
     {
-        id:2,
+        id:602,
         slug:createSlug('Simple House Chair'),
         image:chair7.src,
         title:"upto 70% discount",
@@ -99,7 +99,7 @@ export const cardData : CardData [] =[
            moreImg:[chair1.src,chair7.src,chair4.src,chair6.src,], 
     },  
     {
-        id:3,
+        id:603,
         slug:createSlug('Normal House Chair'),
         image:chair2.src,
         title:"upto 70% discount",
@@ -110,7 +110,7 @@ export const cardData : CardData [] =[
             moreImg:[chair1.src,chair7.src,chair4.src,chair6.src,],
     }, 
      {
-        id:4,
+        id:604,
         slug:createSlug('Comfort House Chair'),
         image:chair3.src,
         title:"upto 70% discount",
@@ -121,7 +121,7 @@ export const cardData : CardData [] =[
             moreImg:[chair1.src,chair7.src,chair4.src,chair6.src,],
     }, 
      {
-        id:5,
+        id:605,
         slug:createSlug('Comfort House Chair two'),
         image:chair4.src,
         title:"upto 70% discount",
@@ -132,7 +132,7 @@ export const cardData : CardData [] =[
             moreImg:[chair1.src,chair7.src,chair4.src,chair6.src,],
     },  
     {
-        id:6,
+        id:606,
         slug:createSlug('Comfort House Chair three'),
         image:chair5.src,
         title:"upto 70% discount",
@@ -143,7 +143,7 @@ export const cardData : CardData [] =[
             moreImg:[chair1.src,chair7.src,chair4.src,chair6.src,],
     },  
     {
-        id:7,
+        id:607,
         slug:createSlug('Comfort House Chair 4'),
         image:chair6.src,
         title:"upto 70% discount",
@@ -154,7 +154,7 @@ export const cardData : CardData [] =[
             moreImg:[chair3.src,chair7.src,chair4.src,chair6.src,],
     },  
     {
-        id:8,
+        id:608,
         slug:createSlug('Comfort House Chair 8'),
         image:chair7.src,
         title:"upto 70% discount",
@@ -165,7 +165,7 @@ export const cardData : CardData [] =[
             moreImg:[chair5.src,chair7.src,chair4.src,chair6.src,],
     },
       {
-        id:9,
+        id:609,
         slug:createSlug('Comfort House Chair 9'),
         image:chair7.src,
         title:"upto 70% discount",
@@ -176,7 +176,7 @@ export const cardData : CardData [] =[
             moreImg:[chair1.src,chair7.src,chair4.src,chair6.src,],
     },  
     {
-        id:10,
+        id:610,
         slug:createSlug('Comfort House Chair10'),
         image:chair4.src,
         des:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has..",
