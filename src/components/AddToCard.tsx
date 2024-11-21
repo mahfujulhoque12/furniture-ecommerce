@@ -6,6 +6,7 @@ import { useCart } from "@/context/CartContext";
 import Image from "next/image";
 import { CartItem } from "@/context/CartContext";
 import cart from '/public/cart/cart.png';
+import Link from 'next/link';
 
 interface AddToCardProps {
   cartItems: CartItem[];
@@ -116,9 +117,9 @@ const AddToCard: React.FC<AddToCardProps> = () => {
         )}
 
         {cartItems.length > 0 && (
-          <button className="px-4 py-2 shadow-md hover:bg-black bg-[#111111] text-white rounded-lg w-full">
+          <Link onClick={toggleDrawer} href="/checkout" className="px-4 py-2 shadow-md hover:bg-black bg-[#111111] text-white rounded-lg w-full block text-center">
             Checkout
-          </button>
+          </Link>
         )}
       </div>
     </div>
