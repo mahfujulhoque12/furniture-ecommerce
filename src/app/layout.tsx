@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 import { poppins } from "@/lib/font";
 import "./globals.css";
-import {
-  ClerkProvider,
-} from '@clerk/nextjs'
-
+import { ClerkProvider } from '@clerk/nextjs';
 import Navigation from "@/components/navbar/Navigation";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
@@ -24,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider dynamic>
     <html lang="en">
       <body className={`${poppins.className} antialiased overflow-x-hidden`}>
        <CartProvider>
