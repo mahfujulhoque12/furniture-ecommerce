@@ -159,10 +159,10 @@ export const cardData : CardData [] =[
         image:chair7.src,
         title:"upto 70% discount",
         name:"Comfort House Chair",
-          price:250,
+        price:250,
         des:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has..",
         oldPrice:"$280",
-            moreImg:[chair5.src,chair7.src,chair4.src,chair6.src,],
+        moreImg:[chair5.src,chair7.src,chair4.src,chair6.src,],
     },
       {
         id:609,

@@ -100,6 +100,8 @@ const menuData: MenuDataItem[] = [
  
 
   { label: "Shop", href: "/shop" },
+  { label: "Category", href: "/category" },
+
 
   { label: "About Us", href: "/about-us" },
   { label: "Blogs", href: "/blog" },

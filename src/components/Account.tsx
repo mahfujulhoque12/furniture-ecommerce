@@ -7,30 +7,12 @@ import { useCart } from "@/context/CartContext";
 import { IoTrashOutline } from "react-icons/io5";
 import cart from "/public/cart/cart.png";
 import Image from "next/image";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-} from "chart.js";
-import { Line } from "react-chartjs-2";
+import Refund from "./Refund";
+import Return from "./Return";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
 
 const Account: React.FC = () => {
-  const [currentSection, setCurrentSection] = useState<"dashboard" | "orders">("orders");
+  const [currentSection, setCurrentSection] = useState<"dashboard" | "orders" | "refund">("orders");
   const { cartItems, removeFromCart, subtotal, total } = useCart();
   const { user } = useUser();
   const { signOut } = useAuth();
@@ -39,38 +21,7 @@ const Account: React.FC = () => {
     signOut(); // Sign out the user
   };
 
-  const chartData = {
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
-    datasets: [
-      {
-        label: "Products View",
-        data: [65, 59, 80, 81, 56, 55, 40],
-        borderColor: "rgba(75, 192, 192, 1)",
-        backgroundColor: "rgba(75, 192, 192, 0.2)",
-        borderWidth: 2
-      },
-      {
-        label: "Products View",
-        data: [28, 48, 40, 19, 86, 27, 90],
-        borderColor: "rgba(153, 102, 255, 1)",
-        backgroundColor: "rgba(153, 102, 255, 0.2)",
-        borderWidth: 2
-      }
-    ]
-  };
 
-  const chartOptions = {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: "top" as const
-      },
-      title: {
-        display: true,
-        text: "Your visited produts"
-      }
-    }
-  };
 
   return (
     <section className="py-5 md:py-10">
@@ -90,9 +41,21 @@ const Account: React.FC = () => {
                     currentSection === "dashboard" ? "font-bold" : ""
                   }`}
                 >
-                  Dashboard
+                  Retrun
                 </button>
               </li>
+
+              <li>
+                <button
+                  onClick={() => setCurrentSection("refund")}
+                  className={`block py-2 px-4 rounded ${
+                    currentSection === "refund" ? "font-bold" : ""
+                  }`}
+                >
+                  Refund
+                </button>
+              </li>
+
               <li>
                 <button
                   onClick={() => setCurrentSection("orders")}
@@ -198,9 +161,18 @@ const Account: React.FC = () => {
 
             {currentSection === "dashboard" && (
               <>
-                <h2 className="text-lg font-bold mb-4">Dashboard</h2>
+                <h2 className="text-lg font-bold mb-4">Return Your Product</h2>
                 <div id="dashboard">
-                  <Line data={chartData} options={chartOptions} />
+                 <Return/>
+                </div>
+              </>
+            )}
+
+            {currentSection === "refund" && (
+              <>
+                <h2 className="text-lg font-bold mb-4">Refund Your product</h2>
+                <div id="refund">
+                 <Refund/>
                 </div>
               </>
             )}
