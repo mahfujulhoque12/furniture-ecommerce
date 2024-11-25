@@ -98,9 +98,100 @@ const menuData: MenuDataItem[] = [
     ],
   },
  
+  {
+    label: "Shop ",
+    href: "/shop",
+    nestedMenu: [
+      {
+        heading: "Furniture Category",
+        submenu: [
+          { label: "House Furniture", href: "/house-furniture" },
+          { label: "Office Furniture",href: "/office-furniture", },
+          { label: "Wall Art & Mirrors",href: "/wall-art-mirrors", },
+          { label: "Curtains & Blinds",href: "/curtains-blinds", },
+          { label: "Rugs & Mats",href: "/rugs-mats", },
+          { label: "Lighting Solutions",href: "/lighting-solutions", },
+          { label: "Compact & Space-Saving Furniture",href: "/compact-space-saving-furniture",},
+        ],
+      },
 
-  { label: "Shop", href: "/shop" },
-  { label: "Category", href: "/category" },
+     {
+        heading: "Furniture Category",
+        submenu: [
+          { label: "Multi-Functional Furniture", href: "/multi-functional-furniture" },
+          { label: "Rattan & Bamboo Furniture",href: "/rattan-bamboo-furniture", },
+          { label: "Leather Furniture",href: "/leather-furniture", },
+          { label: "Fabric Furniture",href: "/fabric-furniture", },
+          { label: "Glass Furniture",href: "/glass-furniture", },
+          { label: "Metal Furniture",href: "/metal-furniture", },
+          { label: "Wooden Furniture",href: "/wooden-furniture",},
+        ],
+      },
+
+      {
+        heading: "Furniture Category",
+        submenu: [
+          { label: "Luxury Furniture", href: "/luxury-furniture" },
+          { label: "Scandinavian Furniture",href: "/scandinavian-furniture", },
+          { label: "Classic Furniture",href: "/classic-furniture", },
+          { label: "Modern Furniture",href: "/modern-furniture", },
+          { label: "TV Units & Media Stands",href: "/tv-units", },
+          { label: "Entryway Furniture",href: "/entryway-furniture", },
+          { label: "Kid's Furniture",href: "/kids-furniture",},
+          { label: "Outdoor Furniture",href: "/outdoor-furniture",},
+        ],
+      },
+
+    ],
+  },
+
+  {
+    label: "Category ",
+    href: "/category",
+    nestedMenu: [
+      {
+        heading: "Furniture Category",
+        submenu: [
+          { label: "House Furniture", href: "/house-furniture" },
+          { label: "Office Furniture",href: "/office-furniture", },
+          { label: "Wall Art & Mirrors",href: "/wall-art-mirrors", },
+          { label: "Curtains & Blinds",href: "/curtains-blinds", },
+          { label: "Rugs & Mats",href: "/rugs-mats", },
+          { label: "Lighting Solutions",href: "/lighting-solutions", },
+          { label: "Compact & Space-Saving Furniture",href: "/compact-space-saving-furniture",},
+        ],
+      },
+
+     {
+        heading: "Furniture Category",
+        submenu: [
+          { label: "Multi-Functional Furniture", href: "/multi-functional-furniture" },
+          { label: "Rattan & Bamboo Furniture",href: "/rattan-bamboo-furniture", },
+          { label: "Leather Furniture",href: "/leather-furniture", },
+          { label: "Fabric Furniture",href: "/fabric-furniture", },
+          { label: "Glass Furniture",href: "/glass-furniture", },
+          { label: "Metal Furniture",href: "/metal-furniture", },
+          { label: "Wooden Furniture",href: "/wooden-furniture",},
+        ],
+      },
+
+      {
+        heading: "Furniture Category",
+        submenu: [
+          { label: "Luxury Furniture", href: "/luxury-furniture" },
+          { label: "Scandinavian Furniture",href: "/scandinavian-furniture", },
+          { label: "Classic Furniture",href: "/classic-furniture", },
+          { label: "Modern Furniture",href: "/modern-furniture", },
+          { label: "TV Units & Media Stands",href: "/tv-units", },
+          { label: "Entryway Furniture",href: "/entryway-furniture", },
+          { label: "Kid's Furniture",href: "/kids-furniture",},
+          { label: "Outdoor Furniture",href: "/outdoor-furniture",},
+        ],
+      },
+
+    ],
+  },
+
 
 
   { label: "About Us", href: "/about-us" },
