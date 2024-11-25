@@ -6,7 +6,7 @@ import OfficeTable from '@/components/OfficeTable';
 import OfficeBookShelf from '@/components/OfficeBookShelf';
 
 
-const page = () =>{
+const Page = () =>{
     return (
         <div>
             <OfficeChair/>
@@ -18,4 +18,4 @@ const page = () =>{
         </div>
     )
 }
-export default page;
+export default Page;
