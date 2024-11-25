@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import MaxWidthWrapper from "./layout/MaxWidthWrapper";
 import { cardData } from "@/data/shopData";
 import Image from "next/image";
@@ -15,11 +15,20 @@ const ShopComponent = () => {
   const [data, setData] = useState(cardData);
   const [active, setActive] = useState<string>("all");
   const [checkbox, setCheckbox] = useState<string | null>(null);
-  const [maxPrice, setMaxPrice] = useState<number>(320);
+  const [maxPrice, setMaxPrice] = useState<number>(0);
+  const [minPrice, setMinPrice] = useState<number>(0);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
   const [isColumnLayout, setIsColumnLayout] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const router = useRouter();
+
+  useEffect(() => {
+    // Dynamically calculate min and max prices from cardData
+    const prices = cardData.map((product) => product.price);
+    setMinPrice(Math.min(...prices));
+    setMaxPrice(Math.max(...prices));
+  }, []);
+
   
   const handleDetails= (slug: string) =>{
     router.push(`/shop/${slug}`)
@@ -39,8 +48,10 @@ const filterData = (category: string, maxPrice: number = 320, color: string | nu
     filteredData = filteredData.filter((card) => card.category === category);
   }
 
-  // Filter by price
-  filteredData = filteredData.filter((card) => card.price <= maxPrice);
+     // Filter by price
+    filteredData = filteredData.filter(
+      (card) => card.price >= minPrice && card.price <= maxPrice
+    );
 
   // Filter by checkbox category (bestseller, featured, latest, etc.)
   if (checkboxCategory) {
@@ -240,16 +251,16 @@ const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
                 <label className="text-sm sm:text-base font-medium text-gray-700">Up to ${maxPrice}</label>
                 <input
                   type="range"
-                  min="0"
-                  max="320"
+                  min={minPrice}
+                  max={Math.max(...cardData.map((product) => product.price))} 
                   step="10"
                   value={maxPrice}
                   onChange={handlePriceChange}
                   className="w-full sm:w-[60%] h-2 bg-gray-200 rounded-full appearance-none cursor-pointer focus:outline-none"
                 />
                 <div className="flex w-full sm:w-[60%] justify-between text-sm text-gray-500">
-                  <span>$0</span>
-                  <span>$320</span>
+                <span>${minPrice}</span>
+                <span>${Math.max(...cardData.map((product) => product.price))}</span>
                 </div>
               </div>
             </div>
